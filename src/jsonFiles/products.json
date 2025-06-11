@@ -1,0 +1,114 @@
+{
+  "products": [
+    {
+      "title": "Denim Jacket",
+      "description": "Classic blue denim jacket for casual wear",
+      "type": ["Body", "casual"],
+      "price": 89.99,
+      "discount": 15,
+      "priceWithDiscount": 76.49,
+      "colors": ["blue", "black"],
+      "size": ["S", "M", "L", "XL"],
+      "commentsId": [101, 102]
+    },
+    {
+      "title": "Slim Fit Jeans",
+      "description": "Comfortable slim-fit jeans with stretch fabric",
+      "type": ["Legs", "casual", "party"],
+      "price": 59.95,
+      "discount": 0,
+      "priceWithDiscount": 59.95,
+      "colors": ["blue", "black", "gray"],
+      "size": ["28x32", "30x32", "32x32"],
+      "commentsId": [103]
+    },
+    {
+      "title": "Leather Chelsea Boots",
+      "description": "Premium leather boots with elastic side panels",
+      "type": ["Boots", "formal", "casual"],
+      "price": 149.99,
+      "discount": 20,
+      "priceWithDiscount": 119.99,
+      "colors": ["brown", "black"],
+      "size": ["US 8", "US 9", "US 10"],
+      "commentsId": [104, 105]
+    },
+    {
+      "title": "Cashmere Sweater",
+      "description": "Luxurious 100% cashmere winter sweater",
+      "type": ["Body", "formal", "casual"],
+      "price": 129.0,
+      "discount": 10,
+      "priceWithDiscount": 116.1,
+      "colors": ["cream", "gray"],
+      "size": ["S", "M", "L"],
+      "commentsId": [106]
+    },
+    {
+      "title": "Jogger Pants",
+      "description": "Casual jogger pants with elastic cuffs",
+      "type": ["Legs", "casual", "gym"],
+      "price": 45.5,
+      "discount": 5,
+      "priceWithDiscount": 43.23,
+      "colors": ["black", "navy"],
+      "size": ["S", "M", "L"],
+      "commentsId": [107, 108]
+    },
+    {
+      "title": "Silk Scarf",
+      "description": "Elegant 100% silk fashion scarf",
+      "type": ["Other", "formal", "party"],
+      "price": 39.99,
+      "discount": 0,
+      "priceWithDiscount": 39.99,
+      "colors": ["red", "blue", "green"],
+      "size": ["One Size"],
+      "commentsId": []
+    },
+    {
+      "title": "Winter Coat",
+      "description": "Warm wool blend coat for cold weather",
+      "type": ["Body", "formal", "casual"],
+      "price": 199.0,
+      "discount": 25,
+      "priceWithDiscount": 149.25,
+      "colors": ["black", "navy"],
+      "size": ["M", "L", "XL"],
+      "commentsId": [109, 110]
+    },
+    {
+      "title": "Hiking Boots",
+      "description": "Durable waterproof boots for outdoor activities",
+      "type": ["Boots", "casual", "gym"],
+      "price": 129.99,
+      "discount": 15,
+      "priceWithDiscount": 110.49,
+      "colors": ["brown", "black"],
+      "size": ["US 8", "US 9", "US 10"],
+      "commentsId": [111]
+    },
+    {
+      "title": "Dress Shirt",
+      "description": "Formal cotton dress shirt with french cuffs",
+      "type": ["Body", "formal", "party"],
+      "price": 49.99,
+      "discount": 10,
+      "priceWithDiscount": 44.99,
+      "colors": ["white", "blue"],
+      "size": ["S", "M", "L"],
+      "commentsId": [112, 113]
+    },
+    {
+      "title": "Leather Belt",
+      "description": "Genuine leather dress belt with metal buckle",
+      "type": ["Other", "formal"],
+      "price": 39.95,
+      "discount": 0,
+      "priceWithDiscount": 39.95,
+      "colors": ["brown", "black"],
+      "size": ["32", "34", "36"],
+      "commentsId": [114]
+    }
+  ]
+}
