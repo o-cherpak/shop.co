@@ -4,12 +4,9 @@ export interface Product {
   type: string[];
   price: number;
   discount: number;
+  id: number;
   priceWithDiscount: number;
   colors: string[];
   size: string[];
   commentsId: number[];
-}
-
-export interface ProductList {
-  products: Product[];
 }

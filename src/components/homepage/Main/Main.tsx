@@ -3,10 +3,10 @@ import { BrandSection } from "./BrandSection/BrandSection";
 import { HeroSection } from "./HeroSection/HeroSection";
 import { NewArrivalsSection } from "./NewArrivalsSection.tsx/NewArrivalsSection";
 import { getAllProducts } from "../../../services/getAllProdutcs";
-import type { ProductList } from "../../../interfaces/Products";
+import type { Product } from "../../../interfaces/Products";
 
 export function Main() {
-  const [products, setProducts] = useState<ProductList | null>(null);
+  const [products, setProducts] = useState<Product[] | null>(null);
 
   const fetchProducts = useCallback(async () => {
     const data = await getAllProducts();
@@ -26,7 +26,7 @@ export function Main() {
       <BrandSection />
 
       {products ? (
-        <NewArrivalsSection newProducts={products.products.slice(0, 5)} />
+        <NewArrivalsSection newProducts={products.slice(0, 5)} />
       ) : (
         <p>...Loading</p>
       )}
