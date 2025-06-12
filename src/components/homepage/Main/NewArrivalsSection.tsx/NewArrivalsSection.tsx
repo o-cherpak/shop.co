@@ -1,5 +1,5 @@
 import type { Product } from "../../../../interfaces/Products";
-import { ArrivalsCard } from "./ArrivalsCard";
+import { ArrivalsCards } from "./ArrivalsCards";
 
 type NewArrivalsSectionProps = {
   newProducts: Product[];
@@ -9,17 +9,21 @@ export function NewArrivalsSection({
   newProducts,
 }: Readonly<NewArrivalsSectionProps>) {
   return (
-    <section>
+    <section className="pt-12">
       <h2
         style={{ fontFamily: "Integral CF", fontWeight: "bold" }}
-        className=""
+        className="text-4xl text-center pb-6"
       >
         NEW ARRIVALS
       </h2>
 
-      {newProducts.map((product: Product, i: number) => (
-        <ArrivalsCard product={product} key={i} />
-      ))}
+      <ArrivalsCards products={newProducts} />
+
+      <div className="flex justify-center">
+        <button className="w-full max-w-xs md:max-w-[200px] border border-black/40 p-2 rounded-3xl shadow-2xl">
+          View All
+        </button>
+      </div>
     </section>
   );
 }

@@ -26,7 +26,7 @@ export function Main() {
       <BrandSection />
 
       {products ? (
-        <NewArrivalsSection newProducts={products.slice(0, 5)} />
+        <NewArrivalsSection newProducts={products.slice(0, 4)} />
       ) : (
         <p>...Loading</p>
       )}
