@@ -4,7 +4,7 @@ type ArrivalsCardprops = {
   product: Product;
 };
 
-export function ArrivalsCard({ product }: Readonly<ArrivalsCardprops>) {
+export function Card({ product }: Readonly<ArrivalsCardprops>) {
   return (
     <div className="bg-white rounded-lg p-4 flex-shrink-0">
       <img
