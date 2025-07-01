@@ -4,21 +4,31 @@ import { HeroSection } from "./HeroSection/HeroSection";
 import { CardSection } from "./CardSection.tsx/CardSection";
 import { getAllProducts } from "../../../services/getAllProdutcs";
 import type { Product } from "../../../interfaces/Products";
+import type { CustomComment } from "../../../interfaces/Comments";
 import { DressStyleSection } from "./DressStyleSection/DressStyleSection";
+import { CommentsSection } from "./CommentsSection/CommentsSection";
+import { getComments } from "../../../services/getCommets";
 
 export function Main() {
   const [products, setProducts] = useState<Product[] | null>(null);
+  const [comments, setComments] = useState<CustomComment[] | null>(null);
 
   const fetchProducts = useCallback(async () => {
     const data = await getAllProducts();
-    console.log(data);
 
     setProducts(data);
   }, []);
 
+  const fetchComments = useCallback(async () => {
+    const data = await getComments();
+
+    setComments(data);
+  }, []);
+
   useEffect(() => {
     fetchProducts();
-  }, [fetchProducts]);
+    fetchComments();
+  }, [fetchProducts, fetchComments]);
 
   return (
     <main>
@@ -39,6 +49,12 @@ export function Main() {
       )}
 
       <DressStyleSection />
+
+      {comments ? (
+        <CommentsSection comments={comments.slice(0, 5)} />
+      ) : (
+        <p>...Loading comments</p>
+      )}
     </main>
   );
 }

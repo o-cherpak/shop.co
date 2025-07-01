@@ -1,6 +1,7 @@
 {
   "products": [
     {
+      "id": 0,
       "title": "Denim Jacket",
       "description": "Classic blue denim jacket for casual wear",
       "type": ["Body", "casual"],
@@ -12,6 +13,7 @@
       "commentsId": [101, 102]
     },
     {
+      "id": 1,
       "title": "Slim Fit Jeans",
       "description": "Comfortable slim-fit jeans with stretch fabric",
       "type": ["Legs", "casual", "party"],
@@ -23,6 +25,7 @@
       "commentsId": [103]
     },
     {
+      "id": 2,
       "title": "Leather Chelsea Boots",
       "description": "Premium leather boots with elastic side panels",
       "type": ["Boots", "formal", "casual"],
@@ -34,6 +37,7 @@
       "commentsId": [104, 105]
     },
     {
+      "id": 3,
       "title": "Cashmere Sweater",
       "description": "Luxurious 100% cashmere winter sweater",
       "type": ["Body", "formal", "casual"],
@@ -45,6 +49,7 @@
       "commentsId": [106]
     },
     {
+      "id": 4,
       "title": "Jogger Pants",
       "description": "Casual jogger pants with elastic cuffs",
       "type": ["Legs", "casual", "gym"],
@@ -56,6 +61,7 @@
       "commentsId": [107, 108]
     },
     {
+      "id": 5,
       "title": "Silk Scarf",
       "description": "Elegant 100% silk fashion scarf",
       "type": ["Other", "formal", "party"],
@@ -67,6 +73,7 @@
       "commentsId": []
     },
     {
+      "id": 6,
       "title": "Winter Coat",
       "description": "Warm wool blend coat for cold weather",
       "type": ["Body", "formal", "casual"],
@@ -78,6 +85,7 @@
       "commentsId": [109, 110]
     },
     {
+      "id": 7,
       "title": "Hiking Boots",
       "description": "Durable waterproof boots for outdoor activities",
       "type": ["Boots", "casual", "gym"],
@@ -89,6 +97,7 @@
       "commentsId": [111]
     },
     {
+      "id": 8,
       "title": "Dress Shirt",
       "description": "Formal cotton dress shirt with french cuffs",
       "type": ["Body", "formal", "party"],
@@ -100,6 +109,7 @@
       "commentsId": [112, 113]
     },
     {
+      "id": 9,
       "title": "Leather Belt",
       "description": "Genuine leather dress belt with metal buckle",
       "type": ["Other", "formal"],
