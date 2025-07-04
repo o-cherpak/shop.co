@@ -2,7 +2,7 @@ import { DressCard } from "./DressCard";
 
 export function TopDressDiv() {
   return (
-    <div className="flex flex-col md:flex-row gap-6 justify-center items-center w-full md:w-1/2 ">
+    <div className="flex flex-col md:flex-row gap-6 justify-center items-center w-full xl:w-1/2">
       <DressCard
         title="Casual"
         imgURL="/images/casualDress.png"

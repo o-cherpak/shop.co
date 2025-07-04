@@ -1,21 +1,60 @@
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import type { CustomComment } from "../../../../interfaces/Comments";
 import { CommentsSlider } from "./CommentsSlider";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRef, useState } from "react";
 
 type CommentsSectionProps = {
   comments: CustomComment[];
 };
 
 export function CommentsSection({ comments }: Readonly<CommentsSectionProps>) {
-  return (
-    <section className="px-10">
-      <h2
-        style={{ fontFamily: "Integral CF", fontWeight: "bold" }}
-        className="text-4xl text-center pb-6"
-      >
-        OUR HAPPY CUSTOMERS
-      </h2>
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [startIndex, setStartIndex] = useState(0);
 
-      <CommentsSlider comments={comments} />
+  const total = comments.length;
+
+  const getVisibleComments = () => {
+    const result = [];
+
+    for (let i = 0; i < 5; i++) {
+      result.push(comments[(startIndex + i) % total]);
+    }
+    return result;
+  };
+
+  const scrollRight = () => {
+    setStartIndex((prev) => (prev + 1) % total);
+  };
+
+  const scrollLeft = () => {
+    setStartIndex((prev) => (prev - 1 + total) % total);
+  };
+
+  return (
+    <section>
+      <div className="flex items-end md:items-center justify-between pb-6 px-6 md:px-10">
+        <h2
+          style={{ fontFamily: "Integral CF", fontWeight: "bold" }}
+          className="text-4xl text-left md:text-center grow"
+        >
+          OUR HAPPY CUSTOMERS
+        </h2>
+
+        <button onClick={scrollLeft} className="text-2xl md:text-3xl pr-4">
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </button>
+
+        <button onClick={scrollRight} className="text-2xl md:text-3xl">
+          <FontAwesomeIcon icon={faArrowRight} />
+        </button>
+      </div>
+
+      <CommentsSlider
+        comments={getVisibleComments()}
+        containerRef={containerRef}
+        centerIndex={2}
+      />
     </section>
   );
 }
