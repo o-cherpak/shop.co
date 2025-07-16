@@ -1,22 +1,18 @@
-import type { RefObject } from "react";
 import type { CustomComment } from "../../../../interfaces/Comments";
 import { CommentCard } from "./CommentCard";
 
 type CommentsSectionProps = {
   comments: CustomComment[];
-  containerRef: RefObject<HTMLDivElement | null>;
   centerIndex: number;
 };
 
 export function CommentsSlider({
   comments,
-  containerRef,
   centerIndex,
 }: Readonly<CommentsSectionProps>) {
   return (
     <div className="overflow-hidden">
       <div
-        ref={containerRef}
         className="flex pb-6 items-center justify-center gap-6 md:gap-16"
       >
         {comments.map((com, i) => {

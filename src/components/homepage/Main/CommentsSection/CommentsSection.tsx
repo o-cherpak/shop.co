@@ -2,14 +2,13 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import type { CustomComment } from "../../../../interfaces/Comments";
 import { CommentsSlider } from "./CommentsSlider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 type CommentsSectionProps = {
   comments: CustomComment[];
 };
 
 export function CommentsSection({ comments }: Readonly<CommentsSectionProps>) {
-  const containerRef = useRef<HTMLDivElement>(null);
   const [startIndex, setStartIndex] = useState(0);
 
   const total = comments.length;
@@ -52,7 +51,6 @@ export function CommentsSection({ comments }: Readonly<CommentsSectionProps>) {
 
       <CommentsSlider
         comments={getVisibleComments()}
-        containerRef={containerRef}
         centerIndex={2}
       />
     </section>
