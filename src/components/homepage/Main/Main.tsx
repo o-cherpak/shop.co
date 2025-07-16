@@ -8,6 +8,7 @@ import type { CustomComment } from "../../../interfaces/Comments";
 import { DressStyleSection } from "./DressStyleSection/DressStyleSection";
 import { CommentsSection } from "./CommentsSection/CommentsSection";
 import { getComments } from "../../../services/getCommets";
+import { SubscribeSection } from "./SubscribeSection/SubscribeSection";
 
 export function Main() {
   const [products, setProducts] = useState<Product[] | null>(null);
@@ -56,7 +57,7 @@ export function Main() {
         <p>...Loading comments</p>
       )}
 
-      
+      <SubscribeSection />
     </main>
   );
 }

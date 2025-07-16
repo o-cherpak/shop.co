@@ -1,0 +1,65 @@
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import emailjs from "emailjs-com";
+import { useState } from "react";
+
+export function SubscribeSection() {
+  const [email, setEmail] = useState<string>("");
+
+  const SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+  const EMAIL_PUBLIC_ID = import.meta.env.VITE_EMAIL_PUBLIC_ID;
+
+  const onSubmitHandle = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, EMAIL_PUBLIC_ID)
+      .then(() => console.log("Email sent successfully!"))
+      .catch((error) => console.error("Error sending email:", error));
+  };
+
+  return (
+    <section className="p-4 pt-10">
+      <form
+        action=""
+        onSubmit={(e) => onSubmitHandle(e)}
+        className="bg-black rounded-2xl p-6 flex flex-col lg:flex-row gap-6 justify-center items-center"
+      >
+        <h2
+          style={{ fontFamily: "Integral CF", fontWeight: "bold" }}
+          className="text-bold text-3xl lg:text-4xl text-white lg:w-1/2"
+        >
+          STAY UPTO DATE ABOUT OUR LATEST OFFERS
+        </h2>
+
+        <div className="flex flex-col gap-4 lg:w-1/4 justify-center items-center ">
+          <div className="bg-white flex items-center w-full px-4 py-2 rounded-xl gap-2">
+            <div className="flex pt-[1px]">
+              <FontAwesomeIcon icon={faEnvelope} color="gray" />
+            </div>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              className="bg-white w-full text-lg border-none outline-0"
+              value={email}
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="bg-white w-full rounded-xl p-2 font-semibold text-lg hover:cursor-pointer"
+          >
+            Subscribe to Newsletter
+          </button>
+        </div>
+      </form>
+    </section>
+  );
+}
+
+
