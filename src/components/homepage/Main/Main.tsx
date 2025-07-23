@@ -59,7 +59,7 @@ export function Main() {
       )}
 
       <div className="relative">
-        <div className="absolute top-1/2 left-0 w-full bg-gray-100 z-0 h-1/2" ></div>
+        <div className="absolute top-1/5 lg:top-1/4 h-full left-0 w-full bg-gray-200 z-0" ></div>
 
         <div className="relative z-10">
           <SubscribeSection />
