@@ -6,6 +6,7 @@ import { useState } from "react";
 export function SubscribeSection() {
   const [email, setEmail] = useState<string>("");
 
+
   const SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID;
   const TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
   const EMAIL_PUBLIC_ID = import.meta.env.VITE_EMAIL_PUBLIC_ID;
@@ -61,5 +62,3 @@ export function SubscribeSection() {
     </section>
   );
 }
-
-

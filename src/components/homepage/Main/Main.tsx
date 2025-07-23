@@ -9,6 +9,7 @@ import { DressStyleSection } from "./DressStyleSection/DressStyleSection";
 import { CommentsSection } from "./CommentsSection/CommentsSection";
 import { getComments } from "../../../services/getCommets";
 import { SubscribeSection } from "./SubscribeSection/SubscribeSection";
+import { Footer } from "./Footer/Footer";
 
 export function Main() {
   const [products, setProducts] = useState<Product[] | null>(null);
@@ -57,7 +58,15 @@ export function Main() {
         <p>...Loading comments</p>
       )}
 
-      <SubscribeSection />
+      <div className="relative">
+        <div className="absolute top-1/2 left-0 w-full bg-gray-100 z-0 h-1/2" ></div>
+
+        <div className="relative z-10">
+          <SubscribeSection />
+
+          <Footer />
+        </div>
+      </div>
     </main>
   );
 }
