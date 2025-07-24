@@ -5,7 +5,7 @@ import { ListLinks } from "./ListLinks";
 
 export function Header() {
   return (
-    <header className="flex justify-between lg:justify-around lg:gap-12 py-4 px-4">
+    <header className="flex justify-between lg:justify-around lg:gap-12 py-4 px-4 border-b border-2 border-gray-200 ">
       <div className="flex gap-2 md:gap-4 lg:gap-6">
         <button className="flex lg:hidden text-xl items-center pt-1 lg:pt-[1px]">
           <FontAwesomeIcon icon={faBars} />

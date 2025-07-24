@@ -7,10 +7,14 @@ export function FooterBottom() {
       </p>
 
       <div className="flex justify-center items-center gap-2 lg:gap-4">
-        <img src="../images/cards/Badge-0.svg" alt="card-picture" />
+          <img src="../images/cards/Badge-0.svg" alt="card-picture" />
+          
         <img src="../images/cards/Badge-1.svg" alt="card-picture" />
+
         <img src="../images/cards/Badge-2.svg" alt="card-picture" />
+
         <img src="../images/cards/Badge-3.svg" alt="card-picture" />
+
         <img src="../images/cards/Badge-4.svg" alt="card-picture" />
       </div>
     </div>

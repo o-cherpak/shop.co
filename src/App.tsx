@@ -1,18 +1,16 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Header } from "./components/homepage/Header/Header";
-import { TopSingUp } from "./components/homepage/Header/TopSingUp";
-import { Main } from "./components/homepage/Main/Main";
+import { Home } from "./pages/home";
+import { Category } from "./pages/category";
 
 function App() {
   return (
-    <>
-      <TopSingUp />
-
-      <Header />
-
-      <Main />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/category" element={<Category />}/>
+      </Routes>
   );
 }
 
 export default App;
+
