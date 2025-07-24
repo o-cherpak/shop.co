@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { BrandSection } from "./BrandSection/BrandSection";
 import { HeroSection } from "./HeroSection/HeroSection";
-import { CardSection } from "./CardSection.tsx/CardSection";
+import { CardSection } from "./CardSection/CardSection";
 import { getAllProducts } from "../../../services/getAllProdutcs";
 import type { Product } from "../../../interfaces/Products";
 import type { CustomComment } from "../../../interfaces/Comments";
