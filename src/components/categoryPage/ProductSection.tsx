@@ -1,12 +1,21 @@
-import { Aside } from "./Aside/aside";
+import type { Product } from "../../interfaces/Products";
+import { Aside } from "./Aside/Aside";
+import { Products } from "./Products";
+import { TitleAndFilterButton } from "./TitleAndFilterButton";
 
-export function ProductSection() {
+type ProductSectionProps = {
+  products: Product[];
+};
+
+export function ProductSection({ products }: Readonly<ProductSectionProps>) {
   return (
-    <section className="px-24">
-      <Aside />
+    <section className="lg:px-24 px-2 flex flex-col gap-8">
+      <TitleAndFilterButton title="Casual" />
 
-      <div>
-        
+      <div className="flex gap-6 items-center justify-center">
+        <Aside />
+
+        <Products products={products} />
       </div>
     </section>
   );
