@@ -30,22 +30,27 @@ export function Category() {
   }, [fetchProducts]);
 
   return (
-    <>
+    <div>
       <TopSingUp />
 
       <Header />
 
       <BreadCrumbs />
 
-      {products ? (
-        <ProductSection products={products} isMobile={isMobile} />
-      ) : (
-        <p>...Loading products</p>
-      )}
+      <div>
+        {products ? (
+          <ProductSection products={products} isMobile={isMobile} />
+        ) : (
+          <p>...Loading products</p>
+        )}
 
-      {products && (
-        <PageNavigator productsLength={products?.length} isMobile={isMobile} />
-      )}
-    </>
+        {products && (
+          <PageNavigator
+            productsLength={products?.length}
+            isMobile={isMobile}
+          />
+        )}
+      </div>
+    </div>
   );
 }

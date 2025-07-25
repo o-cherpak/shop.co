@@ -14,12 +14,14 @@ export function ProductSection({
 }: Readonly<ProductSectionProps>) {
   return (
     <section className="lg:px-24 px-2 flex flex-col gap-8">
-      <TitleAndFilterButton title="Casual" />
-
-      <div className="flex gap-6 items-center justify-center">
+      <div className="flex gap-6 items-start justify-center">
         <Aside />
 
-        <Products products={products} isMobile={isMobile} />
+        <div>
+          <TitleAndFilterButton title="Casual" />
+
+          <Products products={products} isMobile={isMobile} />
+        </div>
       </div>
     </section>
   );
