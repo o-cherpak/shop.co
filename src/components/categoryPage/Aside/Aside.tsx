@@ -1,11 +1,13 @@
 import { faSliders } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { DressType } from "./DressType";
+import { PriceRange } from "./PriceRange";
+import { Colors } from "./Colors";
 
 export function Aside() {
   return (
-    <aside className="hidden lg:flex flex-col w-1/4 border-2 border-gray-300 h-full px-4 py-2 rounded-xl">
-      <div className="flex justify-between pb-2 items-center w-full relative after:bottom-0 after:left-0 after:absolute after:content-[''] after:w-full after:h-[1px] after:bg-gray-300 mb-4">
+    <aside className="hidden lg:flex flex-col w-1/4 border-2 border-gray-300 h-full px-4 py-2 rounded-xl gap-4">
+      <div className="flex w-full justify-between items-center pb-4 relative after:absolute after:left-0 after:bottom-0 after:content-[''] after:w-full after:h-[1px] after:bg-gray-300 after:block after:m-0 after:p-0">
         <h4 className="font-semibold text-xl">Filter</h4>
 
         <span className="rotate-90 text-black/60">
@@ -14,6 +16,10 @@ export function Aside() {
       </div>
 
       <DressType />
+
+      <PriceRange />
+
+      <Colors />
     </aside>
   );
 }
