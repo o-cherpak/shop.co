@@ -1,7 +1,7 @@
 export function FooterBottom() {
   return (
     <div className="lg:px-8">
-      <div className="flex flex-col  lg:flex-row justify-between items-center gap-4 py-4 relative before:absolute before:top-0 before:left-0 before:content-[''] before:w-full before:h-[2px] before:bg-gray-300">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-4 py-4 relative before:absolute before:top-0 before:left-0 before:content-[''] before:w-full before:h-[2px] before:bg-gray-300">
       <p className="text-black/60 text-center lg:text-left">
         Shop.co © 2000-2023, All Rights Reserved
       </p>

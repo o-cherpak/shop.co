@@ -3,7 +3,7 @@ type FooterSectionProps = {
   links: { name: string; link: string }[];
 };
 
-export function FooterSection({ title, links }: FooterSectionProps) {
+export function FooterSection({ title, links }: Readonly<FooterSectionProps>) {
   return (
     <div className="w-1/2 lg:w-1/4">
       <h4 className="pb-4 text-xl font-medium tracking-widest uppercase">

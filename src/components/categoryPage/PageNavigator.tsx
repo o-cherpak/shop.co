@@ -20,7 +20,7 @@ export function PageNavigator({
   }
 
   return (
-    <div className="flex justify-between px-2">
+    <div className="flex justify-between px-2 pt-8 pb-8 relative before:absolute before:bottom-22 before:left-0 before:content-[''] before:w-full before:h-[2px] before:bg-gray-300">
       <button className="flex items-center gap-2 border-2 border-gray-200 p-2 rounded-xl">
         <FontAwesomeIcon icon={faArrowLeft} /> Previous
       </button>
