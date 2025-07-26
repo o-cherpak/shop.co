@@ -25,7 +25,7 @@ export function Colors() {
         </button>
       </div>
 
-      <div className="grid grid-cols-5 gap-5">
+      <div className="grid grid-cols-5 gap-4">
         {buttons.map((button, index) => (
           <button
             key={index}

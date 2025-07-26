@@ -4,6 +4,7 @@ import { DressType } from "./DressType";
 import { PriceRange } from "./PriceRange";
 import { Colors } from "./Colors";
 import { Size } from "./Size";
+import { DressStyle } from "./DressStyle";
 
 export function Aside() {
   return (
@@ -23,6 +24,10 @@ export function Aside() {
       <Colors />
 
       <Size />
+
+      <DressStyle />
+
+      <button className="bg-black text-white rounded-3xl p-3 mb-2">Apply Filter</button>
     </aside>
   );
 }

@@ -14,7 +14,7 @@ export function ProductSection({
 }: Readonly<ProductSectionProps>) {
   return (
     <section className="lg:px-24 px-2 flex flex-col gap-8">
-      <div className="flex gap-6 items-start justify-center">
+      <div className="flex gap-8 items-start justify-center">
         <Aside />
 
         <div>
