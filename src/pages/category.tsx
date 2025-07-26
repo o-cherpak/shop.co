@@ -5,7 +5,6 @@ import { Header } from "../components/Header/Header";
 import { TopSingUp } from "../components/Header/TopSingUp";
 import { getAllProducts } from "../services/getAllProdutcs";
 import type { Product } from "../interfaces/Products";
-import { PageNavigator } from "../components/categoryPage/PageNavigator";
 import { SubscribeSection } from "../components/homepage/Main/SubscribeSection/SubscribeSection";
 import { Footer } from "../components/homepage/Main/Footer/Footer";
 

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function DressType() {
   return (
-    <div className="mt-4 w-full pb-4 text-black/60 relative after:bottom-0 after:left-0 after:absolute after:content-[''] after:w-full after:h-[1px] after:bg-gray-300 mb-4">
+    <div className="w-full pb-4 text-black/60 relative after:bottom-0 after:left-0 after:absolute after:content-[''] after:w-full after:h-[1px] after:bg-gray-300">
       <ul className="w-full flex flex-col gap-2">
         <li className="flex justify-between items-center">
           <p>Body</p> <span><FontAwesomeIcon icon={faChevronRight} /></span>

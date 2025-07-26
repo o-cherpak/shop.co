@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function DressStyle() {
   return (
-    <div className="flex flex-col w-full justify-between items-center mt-4 ">
+    <div className="flex flex-col w-full justify-between items-center">
       <div className="flex w-full justify-between items-center pb-4">
         <h4 className="font-semibold text-xl">Dress Style</h4>
 

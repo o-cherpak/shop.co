@@ -22,7 +22,7 @@ export function ProductSection({
           <TitleAndFilterButton title="Casual" />
 
           <Products products={products} isMobile={isMobile} />
-          
+
           <PageNavigator productsLength={products.length} isMobile={isMobile} />
         </div>
       </div>

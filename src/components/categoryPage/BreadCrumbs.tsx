@@ -1,3 +1,5 @@
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation } from "react-router-dom";
 
 export function BreadCrumbs() {
@@ -12,29 +14,27 @@ export function BreadCrumbs() {
       currentPath += `/${crumb}`;
 
       return (
-        <span key={crumb} className="text-black">
-          <Link
-            to={currentPath}
-            className={`text-black hover:text-black ${
-              index < currentPath.length - 1
-            }
-              ? ""
-              : "after:content-['>'] after:mx-1 after:text-black"
-            }`}
-          >
+        <span key={crumb} className="text-black flex items-center">
+          <Link to={currentPath} className="text-black hover:text-black">
             {crumb}
           </Link>
+          {index > crumb.length - 1 && (
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              className="text-black/80 text-sm mx-1"
+            />
+          )}
         </span>
       );
     });
 
   return (
     <div className="flex items-center gap-2 text-lg text-black/60 font-medium after:mx-1 px-2 lg:px-26 py-4 after:text-black">
-      <Link
-        className="text-lg text-black/60 after:text-black after:content-['>'] after:mx-1"
-        to={"/"}
-      >
-        Home
+      <Link className="text-lg text-black/60" to={"/"}>
+        Home{" "}
+        <span>
+          <FontAwesomeIcon icon={faChevronRight} className="text-sm text-black/80" />
+        </span>
       </Link>
 
       {crumbs}
