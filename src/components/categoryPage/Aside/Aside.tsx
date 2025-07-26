@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { DressType } from "./DressType";
 import { PriceRange } from "./PriceRange";
 import { Colors } from "./Colors";
+import { Size } from "./Size";
 
 export function Aside() {
   return (
@@ -20,6 +21,8 @@ export function Aside() {
       <PriceRange />
 
       <Colors />
+
+      <Size />
     </aside>
   );
 }
