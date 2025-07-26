@@ -27,7 +27,7 @@ export function ProductSection({
       } flex flex-col gap-8`}
     >
       <div className="flex gap-8 items-start justify-center">
-        <Aside isFilterButtonClicked={isFilterButtonClicked} />
+        <Aside isFilterButtonClicked={isFilterButtonClicked} onClose={handleFilterState} />
 
         <div className="">
           <TitleAndFilterButton
