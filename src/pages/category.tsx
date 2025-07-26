@@ -31,7 +31,7 @@ export function Category() {
   }, [fetchProducts]);
 
   return (
-    <div>
+    <div className="">
       <TopSingUp />
 
       <Header />

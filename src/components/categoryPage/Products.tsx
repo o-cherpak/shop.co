@@ -6,12 +6,11 @@ type ProductsProps = {
   isMobile?: boolean;
 };
 
-export function Products({ products, isMobile }: Readonly<ProductsProps>) {
-  const displayedProducts = isMobile ? products.slice(0, 6) : products;
+export function Products({ products }: Readonly<ProductsProps>) { 
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {displayedProducts.map((product) => (
+      {products.map((product) => (
         <Card product={product} showDiscount key={product.id} />
       ))}
     </div>

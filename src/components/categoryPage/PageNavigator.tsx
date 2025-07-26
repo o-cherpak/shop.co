@@ -3,14 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type PageNavigatorProps = {
   productsLength: number;
-  isMobile?: boolean;
 };
 
 export function PageNavigator({
   productsLength,
-  isMobile,
 }: Readonly<PageNavigatorProps>) {
-  const itemsPerPage = isMobile ? 6 : 12;
+  const itemsPerPage = 12;
   const amountOfButtonPages = Math.ceil(productsLength / itemsPerPage);
 
   const pages = [];

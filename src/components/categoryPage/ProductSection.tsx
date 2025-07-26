@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Product } from "../../interfaces/Products";
 import { Aside } from "./Aside/Aside";
 import { PageNavigator } from "./PageNavigator";
@@ -13,17 +14,33 @@ export function ProductSection({
   products,
   isMobile,
 }: Readonly<ProductSectionProps>) {
+  const [isFilterButtonClicked, setIsFilterButtonClicked] = useState(false);
+
+  const handleFilterState = (val: boolean) => {
+    setIsFilterButtonClicked(val);
+  };
+
   return (
-    <section className="lg:px-24 px-2 flex flex-col gap-8">
+    <section
+      className={`lg:px-24 ${
+        isFilterButtonClicked ? "px-0" : "px-2"
+      } flex flex-col gap-8`}
+    >
       <div className="flex gap-8 items-start justify-center">
-        <Aside />
+        <Aside isFilterButtonClicked={isFilterButtonClicked} />
 
         <div className="">
-          <TitleAndFilterButton title="Casual" />
+          <TitleAndFilterButton
+            title="Casual"
+            isMobile={isMobile}
+            onFilterClick={handleFilterState}
+          />
 
-          <Products products={products} isMobile={isMobile} />
+          <Products
+            products={products}
+          />
 
-          <PageNavigator productsLength={products.length} isMobile={isMobile} />
+          <PageNavigator productsLength={products.length} />
         </div>
       </div>
     </section>
