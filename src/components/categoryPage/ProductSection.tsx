@@ -1,5 +1,6 @@
 import type { Product } from "../../interfaces/Products";
 import { Aside } from "./Aside/Aside";
+import { PageNavigator } from "./PageNavigator";
 import { Products } from "./Products";
 import { TitleAndFilterButton } from "./TitleAndFilterButton";
 
@@ -17,10 +18,12 @@ export function ProductSection({
       <div className="flex gap-8 items-start justify-center">
         <Aside />
 
-        <div>
+        <div className="">
           <TitleAndFilterButton title="Casual" />
 
           <Products products={products} isMobile={isMobile} />
+          
+          <PageNavigator productsLength={products.length} isMobile={isMobile} />
         </div>
       </div>
     </section>

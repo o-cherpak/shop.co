@@ -8,7 +8,7 @@ export function PriceRange() {
 
   return (
     <div className="w-full pb-12 flex flex-col relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[0.5px] after:bg-gray-300">
-      <div className="flex  w-full justify-between items-center pb-4">
+      <div className="flex w-full justify-between items-center pb-4">
         <h4 className="font-semibold text-xl">Price</h4>
 
         <button className="flex">

@@ -6,6 +6,8 @@ import { TopSingUp } from "../components/Header/TopSingUp";
 import { getAllProducts } from "../services/getAllProdutcs";
 import type { Product } from "../interfaces/Products";
 import { PageNavigator } from "../components/categoryPage/PageNavigator";
+import { SubscribeSection } from "../components/homepage/Main/SubscribeSection/SubscribeSection";
+import { Footer } from "../components/homepage/Main/Footer/Footer";
 
 export function Category() {
   const [products, setProducts] = useState<Product[] | null>(null);
@@ -43,14 +45,11 @@ export function Category() {
         ) : (
           <p>...Loading products</p>
         )}
-
-        {products && (
-          <PageNavigator
-            productsLength={products?.length}
-            isMobile={isMobile}
-          />
-        )}
       </div>
+
+      <SubscribeSection />
+
+      <Footer />
     </div>
   );
 }
