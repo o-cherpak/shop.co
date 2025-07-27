@@ -24,7 +24,7 @@ export function TitleAndFilterButton({
           <p className="text-black/60">Showing 1-10 of 100 Products</p>
         </div>
 
-        <p className="flex items-center text-black/60">
+        <p className="items-center text-black/60 hidden lg:flex">
           Sorting by:{" "}
           <span className="text-black font-medium mx-1">Most popular</span>{" "}
           

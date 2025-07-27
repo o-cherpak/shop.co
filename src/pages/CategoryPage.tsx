@@ -8,7 +8,7 @@ import type { Product } from "../interfaces/Products";
 import { SubscribeSection } from "../components/homepage/Main/SubscribeSection/SubscribeSection";
 import { Footer } from "../components/homepage/Main/Footer/Footer";
 
-export function Category() {
+export function CategoryPage() {
   const [products, setProducts] = useState<Product[] | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 

@@ -1,16 +1,18 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Home } from "./pages/home";
-import { Category } from "./pages/category";
+import { HomePage } from "./pages/HomePage";
+import { CategoryPage } from "./pages/CategoryPage";
+import { ProductPage } from "./pages/ProductPage";
+
 
 function App() {
   return (
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/category" element={<Category />}/>
-      </Routes>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/CategoryPage" element={<CategoryPage />} />
+      <Route path="/CategoryPage/ProductPage" element={<ProductPage />} />
+    </Routes>
   );
 }
 
 export default App;
-

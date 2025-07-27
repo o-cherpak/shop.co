@@ -4,7 +4,7 @@ export function ListLinks() {
   return (
     <ul className="hidden lg:flex items-center gap-6">
       
-      <Link to="/category">
+      <Link to="/CategoryPage">
         <li className="text-lg">Shop</li>
       </Link>
 
