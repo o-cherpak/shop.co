@@ -2,7 +2,7 @@ type ImagesProps = {
   productId: number;
 };
 
-export function Images({productId} : Readonly<ImagesProps>) {
+export function ImagesOfProduct({productId}: Readonly<ImagesProps>) {
   return (
     <div className="flex flex-col items-center px-4 gap-4">
       <div className="flex justify-center rounded-2xl w-full bg-gray-150">

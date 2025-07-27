@@ -1,16 +1,30 @@
-import type { Product } from "../../interfaces/Products";
-import { Images } from "./Images";
+import type {Product} from "../../interfaces/Products";
+import {ImagesOfProduct} from "./ImagesOfProduct.tsx";
+import {useEffect, useState} from "react";
+import {TextOfProduct} from "./TextOfProduct.tsx";
+import {ColorsOfProduct} from "./ColorsOfProduct.tsx";
 
 type ClickedProductSectionProps = {
   product: Product;
 };
 
-export function ClickedProductSection({
-  product,
-}: Readonly<ClickedProductSectionProps>) {
+export function ClickedProductSection({product}: Readonly<ClickedProductSectionProps>) {
+  const [showDiscount, setShowDiscount] = useState(false);
+
+  useEffect(() => {
+    setShowDiscount(product.discount > 0);
+  }, [product]);
+
+
   return (
     <section className="">
-      <Images productId={product.id} />
+      <ImagesOfProduct productId={product.id}/>
+
+      <div className={"px-6 flex flex-col gap-4"}>
+        <TextOfProduct product={product} showDiscount={showDiscount}/>
+
+        <ColorsOfProduct productColors={product.colors}/>
+      </div>
     </section>
   );
 }
