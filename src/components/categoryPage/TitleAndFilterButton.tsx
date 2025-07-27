@@ -1,4 +1,4 @@
-import { faSliders } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faSliders } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type TitleAndFilterButtonProps = {
@@ -17,10 +17,21 @@ export function TitleAndFilterButton({
 
   return (
     <div className="flex items-end justify-between lg:justify-start">
-      <div className="flex gap-2 items-end justify-between">
-        <h4 className="font-semibold text-2xl">{title}</h4>
+      <div className="flex justify-between items-end w-full px-4">
+        <div className="flex items-end gap-2">
+          <h4 className="font-semibold text-2xl">{title}</h4>
 
-        <p className="text-black/60">Showing 1-10 of 100 Products</p>
+          <p className="text-black/60">Showing 1-10 of 100 Products</p>
+        </div>
+
+        <p className="flex items-center text-black/60">
+          Sorting by:{" "}
+          <span className="text-black font-medium mx-1">Most popular</span>{" "}
+          
+          <button className="text-black/80">
+            <FontAwesomeIcon icon={faAngleDown} />
+          </button>
+        </p>
       </div>
 
       <button
