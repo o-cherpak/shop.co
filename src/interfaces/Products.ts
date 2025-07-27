@@ -8,5 +8,4 @@ export interface Product {
   priceWithDiscount: number;
   colors: string[];
   size: string[];
-  commentsId: number[];
 }
