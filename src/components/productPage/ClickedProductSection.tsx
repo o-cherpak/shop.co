@@ -20,10 +20,10 @@ export function ClickedProductSection({
   }, [product]);
 
   return (
-    <section className="">
-      <ImagesOfProduct productId={product.id} />
+    <section className="lg:flex lg:flex-row gap-4">
+        <ImagesOfProduct productId={product.id} />
 
-      <div className={"px-6 flex flex-col gap-4"}>
+      <div className={"px-6 flex flex-col gap-4 lg:gap-6 lg:w-3/7"}>
         <TextOfProduct product={product} showDiscount={showDiscount} />
 
         <ColorsOfProduct productColors={product.colors} />
