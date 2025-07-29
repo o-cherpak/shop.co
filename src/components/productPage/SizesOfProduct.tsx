@@ -13,7 +13,7 @@ export function SizesOfProduct({
     >
       <h4 className={"text-black/60 text-xl"}>Choose Size</h4>
 
-      <div className={"flex w-full justify-around pt-1"}>
+      <div className={"flex w-full justify-around lg:justify-start lg:gap-4 pt-1"}>
         {productSizes.map((size) => (
           <button
             key={size}

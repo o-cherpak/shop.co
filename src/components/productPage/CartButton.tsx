@@ -17,7 +17,7 @@ export function CartButton() {
 
   return (
     <div className="flex gap-4 pb-10">
-      <div className="flex w-1/3 items-center gap-2 text-xl bg-gray-150 px-4 py-1 rounded-3xl">
+      <div className="flex w-1/3 items-center justify-center gap-2 text-xl bg-gray-150 px-4 py-1 rounded-3xl">
         <button className="">
           <FontAwesomeIcon onClick={decreaseAmount} icon={faMinus} />
         </button>
