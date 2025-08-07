@@ -1,8 +1,8 @@
-import type { CustomComment } from "../../../../interfaces/Comments";
+import type { CustomCommentInterface } from "../../../../interfaces/Comments";
 import { CommentCard } from "./CommentCard";
 
 type CommentsSectionProps = {
-  comments: CustomComment[];
+  comments: CustomCommentInterface[];
   centerIndex: number;
 };
 

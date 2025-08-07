@@ -19,6 +19,10 @@ export function CategoryPage() {
   }, []);
 
   useEffect(() => {
+    fetchProducts();
+  }, [fetchProducts]);
+
+  useEffect(() => {
     const IsDisplayMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -26,9 +30,6 @@ export function CategoryPage() {
     IsDisplayMobile();
   }, []);
 
-  useEffect(() => {
-    fetchProducts();
-  }, [fetchProducts]);
 
   return (
     <div className="relative">

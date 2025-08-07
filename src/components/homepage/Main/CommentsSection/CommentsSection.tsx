@@ -1,11 +1,11 @@
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import type { CustomComment } from "../../../../interfaces/Comments";
+import type { CustomCommentInterface } from "../../../../interfaces/Comments";
 import { CommentsSlider } from "./CommentsSlider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 type CommentsSectionProps = {
-  comments: CustomComment[];
+  comments: CustomCommentInterface[];
 };
 
 export function CommentsSection({ comments }: Readonly<CommentsSectionProps>) {

@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import type { CustomComment } from "../../../../interfaces/Comments";
+import type { CustomCommentInterface } from "../../../../interfaces/Comments";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
 type CommentCardProps = {
-  comment: CustomComment;
+  comment: CustomCommentInterface;
 };
 
 export function CommentCard({ comment }: Readonly<CommentCardProps>) {
