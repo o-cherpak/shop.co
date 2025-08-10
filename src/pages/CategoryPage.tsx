@@ -3,7 +3,7 @@ import { BreadCrumbs } from "../components/categoryPage/BreadCrumbs";
 import { ProductSection } from "../components/categoryPage/ProductSection";
 import { Header } from "../components/Header/Header";
 import { TopSingUp } from "../components/Header/TopSingUp";
-import { getAllProducts } from "../services/getAllProdutcs";
+import { getAllProducts } from "../services/getProdutcs.ts";
 import type { Product } from "../interfaces/Products";
 import { SubscribeSection } from "../components/homepage/Main/SubscribeSection/SubscribeSection";
 import { Footer } from "../components/homepage/Main/Footer/Footer";

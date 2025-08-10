@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { BrandSection } from "./BrandSection/BrandSection";
 import { HeroSection } from "./HeroSection/HeroSection";
 import { CardSection } from "./CardSection/CardSection";
-import { getAllProducts } from "../../../services/getAllProdutcs";
+import { getAllProducts } from "../../../services/getProdutcs.ts";
 import type { Product } from "../../../interfaces/Products";
 import type { CustomCommentInterface } from "../../../interfaces/Comments";
 import { DressStyleSection } from "./DressStyleSection/DressStyleSection";

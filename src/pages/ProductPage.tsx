@@ -8,7 +8,7 @@ import {useCallback, useEffect, useState} from "react";
 import {getComments} from "../services/getCommets.ts";
 import type {CustomCommentInterface} from "../interfaces/Comments.ts";
 import {AlsoLike} from "../components/productPage/AlsoLike.tsx";
-import {getAllProducts} from "../services/getAllProdutcs.ts";
+import {getAllProducts} from "../services/getProdutcs.ts";
 import type {Product} from "../interfaces/Products.ts";
 import {Footer} from "../components/homepage/Main/Footer/Footer.tsx";
 import {SubscribeSection} from "../components/homepage/Main/SubscribeSection/SubscribeSection.tsx";

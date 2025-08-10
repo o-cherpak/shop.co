@@ -1,26 +1,23 @@
-import {
-  faSearch,
-  faCartShopping,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Form } from "./Form";
+import {faCartShopping, faSearch, faUser,} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {Form} from "./Form";
+import {Link} from "react-router-dom";
 
 export function Navigation() {
   return (
     <nav className="flex gap-3 items-center">
-      <Form />
+      <Form/>
 
       <button className="flex lg:hidden text-xl">
-        <FontAwesomeIcon icon={faSearch} />
+        <FontAwesomeIcon icon={faSearch}/>
       </button>
 
-      <a href="/" className="flex text-xl">
-        <FontAwesomeIcon icon={faCartShopping} />
-      </a>
+      <Link to="/CartPage" className={"flex text-xl"}>
+        <FontAwesomeIcon icon={faCartShopping}/>
+      </Link>
 
       <a href="/" className="flex text-xl">
-        <FontAwesomeIcon icon={faUser} />
+        <FontAwesomeIcon icon={faUser}/>
       </a>
     </nav>
   );
