@@ -17,8 +17,8 @@ export function ClickedProductSection({product}: Readonly<ClickedProductSectionP
   const [showDiscount, setShowDiscount] = useState<boolean>(false);
   const [isCartClicked, setIsCartClicked] = useState<boolean>(false);
 
-  const [size, setSize] = useState<string>("");
-  const [color, setColor] = useState<string>("");
+  const [size, setSize] = useState<string>("Large");
+  const [color, setColor] = useState<string>("Blue");
 
 
   useEffect(() => {

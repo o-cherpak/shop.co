@@ -18,7 +18,7 @@ export function CartItems({cart}: Readonly<CartItemsProps>) {
 
       <div>
         {cart && cart.map((item) => (
-          <CartItem productsWithParam={item} key={item.product.id} />
+          <CartItem productWithParam={item} key={item.product.id} />
         ))}
       </div>
     </div>

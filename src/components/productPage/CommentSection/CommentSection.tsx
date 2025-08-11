@@ -40,8 +40,8 @@ export function CommentSection({comments}: Readonly<CommentSectionProps>) {
       </div>
 
       <div className={"grid grid-cols-1 lg:grid-cols-2 gap-4 px-4 lg:px-14"}>
-        {comments.map((comment) => (
-          <CustomComment comment={comment}/>
+        {comments.map((comment, index) => (
+          <CustomComment comment={comment} key={index}/>
         ))}
       </div>
 
