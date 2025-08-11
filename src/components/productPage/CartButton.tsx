@@ -1,8 +1,12 @@
-import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import {faMinus, faPlus} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {useState} from "react";
 
-export function CartButton() {
+type CartButtonProps = {
+  onClick: (val: boolean, amount: number) => void;
+}
+
+export function CartButton({onClick}: Readonly<CartButtonProps>) {
   const [amount, setAmount] = useState(1);
 
   const decreaseAmount = () => {
@@ -19,7 +23,7 @@ export function CartButton() {
     <div className="flex gap-4 pb-6">
       <div className="flex w-1/3 items-center justify-center gap-2 text-xl bg-gray-150 px-4 py-1 rounded-3xl">
         <button className="">
-          <FontAwesomeIcon onClick={decreaseAmount} icon={faMinus} />
+          <FontAwesomeIcon onClick={decreaseAmount} icon={faMinus}/>
         </button>
 
         <span className="w-7 px-2">{amount}</span>
@@ -32,7 +36,12 @@ export function CartButton() {
         </button>
       </div>
 
-      <button className="bg-black text-white w-full py-3 rounded-3xl">Add to Cart</button>
+      <button
+        className="bg-black text-white w-full py-3 rounded-3xl"
+        onClick={() => onClick(true, amount)}
+      >
+        Add to Cart
+      </button>
     </div>
   );
 }

@@ -15,5 +15,5 @@ export interface ProductWithParam {
   product: Product,
   size: string,
   color: string,
-  amount: string,
+  amount: number,
 }

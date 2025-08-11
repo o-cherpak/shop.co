@@ -1,10 +1,9 @@
 type SizesOfProductProps = {
   productSizes: string[];
+  onSizeSelected: (size: string) => void;
 };
 
-export function SizesOfProduct({
-  productSizes,
-}: Readonly<SizesOfProductProps>) {
+export function SizesOfProduct({productSizes, onSizeSelected}: Readonly<SizesOfProductProps>) {
   return (
     <div
       className={
@@ -16,6 +15,9 @@ export function SizesOfProduct({
       <div className={"flex w-full justify-around lg:justify-start lg:gap-4 pt-1"}>
         {productSizes.map((size) => (
           <button
+            onClick={() => {
+              onSizeSelected(size)
+            }}
             key={size}
             className={`flex w-18 justify-center py-2 px-3 rounded-3xl bg-gray-200 text-black/60`}
           >
