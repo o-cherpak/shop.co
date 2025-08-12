@@ -4,6 +4,7 @@ import {Header} from "../components/Header/Header.tsx";
 import {CartItems} from "../components/cartPage/CartItems.tsx";
 import {useEffect, useState} from "react";
 import type {ProductWithParam} from "../interfaces/Products.ts";
+import {OrderSummary} from "../components/cartPage/OrderSummary.tsx";
 
 export function CartPage() {
   const [cart, setCart] = useState<ProductWithParam[]>([]);
@@ -22,6 +23,8 @@ export function CartPage() {
       <BreadCrumbs/>
 
       <CartItems cart={cart}/>
+
+      <OrderSummary productsWithParam={cart} />
     </section>
   )
 }

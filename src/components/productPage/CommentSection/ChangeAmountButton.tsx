@@ -20,7 +20,7 @@ export function ChangeAmountButton({amountP, setAmount}: ChangeAmountButtonProps
   };
 
   return (
-    <div className="flex w-1/3 items-center justify-center gap-2 text-xl bg-gray-150 px-4 py-1 rounded-3xl">
+    <div className="flex items-center justify-center gap-2 bg-gray-150 px-4 py-1 rounded-3xl">
       <button className="">
         <FontAwesomeIcon onClick={decreaseAmount} icon={faMinus}/>
       </button>
