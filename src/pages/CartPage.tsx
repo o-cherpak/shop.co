@@ -5,6 +5,8 @@ import {CartItems} from "../components/cartPage/CartItems.tsx";
 import {useEffect, useState} from "react";
 import type {ProductWithParam} from "../interfaces/Products.ts";
 import {OrderSummary} from "../components/cartPage/OrderSummary.tsx";
+import {SubscribeSection} from "../components/homepage/Main/SubscribeSection/SubscribeSection.tsx";
+import {Footer} from "../components/homepage/Main/Footer/Footer.tsx";
 
 export function CartPage() {
   const [cart, setCart] = useState<ProductWithParam[]>([]);
@@ -24,7 +26,17 @@ export function CartPage() {
 
       <CartItems cart={cart}/>
 
-      <OrderSummary productsWithParam={cart} />
+      <OrderSummary productsWithParam={cart}/>
+
+      <div className="relative">
+        <div className="absolute top-1/5 lg:top-1/5 h-[880px] lg:h-[460px] left-0 w-full bg-gray-200 z-0"></div>
+
+        <div className="relative z-10">
+          <SubscribeSection/>
+
+          <Footer/>
+        </div>
+      </div>
     </section>
   )
 }
