@@ -8,10 +8,10 @@ type CartItemsProps = {
 export function CartItems({cart}: Readonly<CartItemsProps>) {
 
   return (
-    <div className={"px-4 mb-4"}>
+    <div className={"px-4 mb-4 lg:w-1/2"}>
       <h3
         style={{fontFamily: "Integral CF", fontWeight: "bold"}}
-        className="text-3xl text-center pb-6"
+        className="text-3xl text-center lg:text-left pb-6"
       >
         Your cart
       </h3>

@@ -22,11 +22,15 @@ export function CartPage() {
 
       <Header/>
 
-      <BreadCrumbs/>
+      <div className={"lg:pl-6"}>
+        <BreadCrumbs/>
+      </div>
 
-      <CartItems cart={cart}/>
+      <div className={"flex flex-col lg:flex-row w-full justify-center"}>
+        <CartItems cart={cart}/>
 
-      <OrderSummary productsWithParam={cart}/>
+        <OrderSummary productsWithParam={cart}/>
+      </div>
 
       <div className="relative">
         <div className="absolute top-1/5 lg:top-1/5 h-[880px] lg:h-[460px] left-0 w-full bg-gray-200 z-0"></div>

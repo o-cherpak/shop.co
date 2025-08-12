@@ -18,7 +18,7 @@ export function OrderSummary({productsWithParam}: Readonly<OrderSummaryProps>) {
   const total = subtotal - totalDiscount;
 
   return (
-    <div className={"border border-gray-200 rounded-2xl py-6 px-2 mx-4"}>
+    <div className={"border border-gray-200 rounded-2xl lg:mt-15 py-6 lg:py-10 lg:px-4 px-2 mx-4 lg:w-1/3 h-[100%]"}>
       <h4 className={"font-semibold text-2xl pb-4"}>Order Summary</h4>
 
       <div className={"text-lg"}>

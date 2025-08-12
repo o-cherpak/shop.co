@@ -14,13 +14,13 @@ export function CartItem({productWithParam}: Readonly<CartItemsProps>) {
 
   return (
     <div
-      className={"flex items-center gap-4 pb-2 border-b-[1px] last:border-none last:pb-0 border-b-gray-300"}
+      className={"flex items-center gap-4 pb-2 lg:px-4 lg:py-2 lg:pb-6 border-b-[1px] last:border-none last:pb-0 border-b-gray-300"}
     >
       <div>
         <img
           src={`../../images/clothes${productWithParam.product.id + 1}.png`}
           alt={productWithParam.product.description}
-          className={"h-28 w-46"}
+          className={"h-28 w-46 lg:h-32 lg:w-42"}
         />
       </div>
 
@@ -39,7 +39,7 @@ export function CartItem({productWithParam}: Readonly<CartItemsProps>) {
         </div>
 
         <div className={"flex items-center justify-between"}>
-          <p className={"text-lg font-semibold"}>${productWithParam.product.price}</p>
+          <p className={"text-lg lg:text-xl font-semibold"}>${productWithParam.product.price}</p>
 
           <ChangeAmountButton amountP={amount} setAmount={setAmount}/>
         </div>
