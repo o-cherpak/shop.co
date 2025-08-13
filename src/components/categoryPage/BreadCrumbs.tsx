@@ -7,7 +7,7 @@ export function BreadCrumbs() {
 
   let currentPath = "";
 
-  const crumbs = location.pathname
+  const crumbs = decodeURI(location.pathname)
     .split("/")
     .filter((crumb) => crumb !== "")
     .map((crumb, index) => {

@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import type { Product } from "../../../../interfaces/Products";
 
-type ArrivalsCardprops = {
+type ArrivalsCardProps = {
   product: Product;
   showDiscount?: boolean;
 };
 
-export function Card({ product, showDiscount }: Readonly<ArrivalsCardprops>) {
+export function Card({ product, showDiscount }: Readonly<ArrivalsCardProps>) {
   return (
-    <Link to={"/CategoryPage/ProductPage"}>
+    <Link to={`/CategoryPage/${product.title}`}>
       <div className="bg-white rounded-lg p-4 flex-shrink-0 hover:scale-105 transition-transform duration-300 hover:cursor-pointer">
         <img
           src={`/images/clothes${product.id + 1}.png`}

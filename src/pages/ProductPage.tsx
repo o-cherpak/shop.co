@@ -12,14 +12,26 @@ import {getAllProducts} from "../services/getProdutcs.ts";
 import type {Product} from "../interfaces/Products.ts";
 import {Footer} from "../components/homepage/Main/Footer/Footer.tsx";
 import {SubscribeSection} from "../components/homepage/Main/SubscribeSection/SubscribeSection.tsx";
+import {useParams} from "react-router-dom";
 
 export function ProductPage() {
   const [comments, setComments] = useState<CustomCommentInterface[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
+  const [clickedProduct, setClickedProduct] = useState<Product | null>(null);
+
+  const params = useParams();
+
+  useEffect(() => {
+    const clickedProduct = products.find((product) => product.title === (params.productTitle));
+
+    if (!clickedProduct) return;
+
+    setClickedProduct(clickedProduct);
+  }, [params.productTitle, products]);
 
   const fetch = useCallback(async () => {
     const comments = await getComments();
-    const products = await  getAllProducts()
+    const products = await getAllProducts()
 
     setComments(comments);
     setProducts(products);
@@ -39,33 +51,21 @@ export function ProductPage() {
 
       <BreadCrumbs/>
 
-      <ClickedProductSection
-        product={{
-          id: 0,
-          title: "Denim Jacket",
-          description: "Classic blue denim jacket for casual wear",
-          type: ["Body", "casual"],
-          price: 89.99,
-          discount: 15,
-          priceWithDiscount: 76.49,
-          colors: ["blue", "black"],
-          size: ["S", "M", "L", "XL"],
-        }}
-      />
+      {clickedProduct && <ClickedProductSection product={clickedProduct}/>}
 
       <SectionPicker/>
 
       <CommentSection comments={comments}/>
 
-      <AlsoLike products={products} />
+      <AlsoLike products={products}/>
 
       <div className="relative">
-        <div className="absolute top-1/5 lg:top-1/5 h-[880px] lg:h-[460px] left-0 w-full bg-gray-200 z-0" ></div>
+        <div className="absolute top-1/5 lg:top-1/5 h-[880px] lg:h-[460px] left-0 w-full bg-gray-200 z-0"></div>
 
         <div className="relative z-10">
-          <SubscribeSection />
+          <SubscribeSection/>
 
-          <Footer />
+          <Footer/>
         </div>
       </div>
     </div>
