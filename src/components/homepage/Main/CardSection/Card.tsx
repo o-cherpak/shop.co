@@ -16,6 +16,7 @@ export function Card({product, showDiscount}: Readonly<ArrivalsCardProps>) {
           src={`/images/clothes${product.id + 1}.png`}
           alt={product.title}
           className="rounded mb-2 w-60"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         />
       </Link>
 

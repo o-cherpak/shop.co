@@ -42,7 +42,7 @@ export function PriceRange() {
           max={500}
           values={values}
           onChange={(vals) => setValues(vals)}
-          renderTrack={({ props, children }) => (
+          renderTrack={({ props, children} ) => (
             <div
               {...props}
               style={{
@@ -68,6 +68,7 @@ export function PriceRange() {
           renderThumb={({ props, index }) => (
             <div
               {...props}
+              key={index}
               style={{
                 ...props.style,
                 height: "20px",
