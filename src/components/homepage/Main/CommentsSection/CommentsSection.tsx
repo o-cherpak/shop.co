@@ -14,6 +14,8 @@ export function CommentsSection({ comments }: Readonly<CommentsSectionProps>) {
   const total = comments.length;
 
   const getVisibleComments = () => {
+    if (total === 0) return [];
+
     const result = [];
 
     for (let i = 0; i < 5; i++) {

@@ -15,7 +15,7 @@ export function CommentsSlider({
       <div
         className="flex pb-6 items-center justify-center gap-6 md:gap-16"
       >
-        {comments.map((com, i) => {
+        {comments?.map((com, i) => {
           const isCenter = i >= centerIndex - 1 && i <= centerIndex + 1;
 
           return (
