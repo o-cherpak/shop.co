@@ -1,136 +1,134 @@
-{
-  "products": [
-    {
-      "id": 0,
-      "title": "Denim Jacket",
-      "description": "Classic blue denim jacket for casual wear",
-      "type": ["Body", "casual"],
-      "price": 89.99,
-      "discount": 15,
-      "priceWithDiscount": 76.49,
-      "colors": ["blue", "black"],
-      "size": ["S", "M", "L", "XL"]
-    },
-    {
-      "id": 1,
-      "title": "Slim Fit Jeans",
-      "description": "Comfortable slim-fit jeans with stretch fabric",
-      "type": ["Legs", "casual", "party"],
-      "price": 59.95,
-      "discount": 0,
-      "priceWithDiscount": 59.95,
-      "colors": ["blue", "black", "gray"],
-      "size": ["28x32", "30x32", "32x32"]
-    },
-    {
-      "id": 2,
-      "title": "Leather Chelsea Boots",
-      "description": "Premium leather boots with elastic side panels",
-      "type": ["Boots", "formal", "casual"],
-      "price": 149.99,
-      "discount": 20,
-      "priceWithDiscount": 119.99,
-      "colors": ["brown", "black"],
-      "size": ["US 8", "US 9", "US 10"]
-    },
-    {
-      "id": 3,
-      "title": "Cashmere Sweater",
-      "description": "Luxurious 100% cashmere winter sweater",
-      "type": ["Body", "formal", "casual"],
-      "price": 129.0,
-      "discount": 10,
-      "priceWithDiscount": 116.1,
-      "colors": ["cream", "gray"],
-      "size": ["S", "M", "L"]
-    },
-    {
-      "id": 4,
-      "title": "Jogger Pants",
-      "description": "Casual jogger pants with elastic cuffs",
-      "type": ["Legs", "casual", "gym"],
-      "price": 45.5,
-      "discount": 5,
-      "priceWithDiscount": 43.23,
-      "colors": ["black", "navy"],
-      "size": ["S", "M", "L"]
-    },
-    {
-      "id": 5,
-      "title": "Silk Scarf",
-      "description": "Elegant 100% silk fashion scarf",
-      "type": ["Other", "formal", "party"],
-      "price": 39.99,
-      "discount": 0,
-      "priceWithDiscount": 39.99,
-      "colors": ["red", "blue", "green"],
-      "size": ["One Size"]
-    },
-    {
-      "id": 6,
-      "title": "Winter Coat",
-      "description": "Warm wool blend coat for cold weather",
-      "type": ["Body", "formal", "casual"],
-      "price": 199.0,
-      "discount": 25,
-      "priceWithDiscount": 149.25,
-      "colors": ["black", "navy"],
-      "size": ["M", "L", "XL"]
-    },
-    {
-      "id": 7,
-      "title": "Hiking Boots",
-      "description": "Durable waterproof boots for outdoor activities",
-      "type": ["Boots", "casual", "gym"],
-      "price": 129.99,
-      "discount": 15,
-      "priceWithDiscount": 110.49,
-      "colors": ["brown", "black"],
-      "size": ["US 8", "US 9", "US 10"]
-    },
-    {
-      "id": 8,
-      "title": "Dress Shirt",
-      "description": "Formal cotton dress shirt with french cuffs",
-      "type": ["Body", "formal", "party"],
-      "price": 49.99,
-      "discount": 10,
-      "priceWithDiscount": 44.99,
-      "colors": ["white", "blue"],
-      "size": ["S", "M", "L"]
-    },
-    {
-      "id": 9,
-      "title": "Leather Belt",
-      "description": "Genuine leather dress belt with metal buckle",
-      "type": ["Other", "formal"],
-      "price": 39.95,
-      "discount": 0,
-      "priceWithDiscount": 39.95,
-      "colors": ["brown", "black"],
-      "size": ["32", "34", "36"]
-    },
-    {
-      "id": 10,
-      "title": "Denim Jacket",
-      "description": "Classic blue denim jacket with button closure and side pockets",
-      "type": ["Clothing", "casual"],
-      "price": 59.99,
-      "discount": 10,
-      "priceWithDiscount": 53.99,
-      "colors": ["blue", "black"],
-      "size": ["S", "M", "L", "XL"]
-    },
-    {
-      "id": 11,
-      "title": "Sports Running Shoes",
-      "description": "Lightweight breathable running shoes with cushioned sole for comfort",
-      "type": ["Shoes", "sports"],
-      "price": 89.99,
-      "discount": 15,
-      "priceWithDiscount": 76.49,
-      "colors": ["white", "blue", "red"],
-      "size": ["40", "41", "42", "43", "44"]
-    }
-  ]
-}
+[
+  {
+    "id": 0,
+    "title": "Graphic T-Shirt",
+    "description": "Black graphic t-shirt with small front print",
+    "type": ["Body", "casual"],
+    "price": 89.99,
+    "discount": 15,
+    "priceWithDiscount": 76.49,
+    "colors": ["gray", "white"],
+    "size": ["small", "medium", "large"]
+  },
+  {
+    "id": 1,
+    "title": "Slim Fit Jeans",
+    "description": "Blue slim fit jeans for everyday wear",
+    "type": ["Legs", "casual"],
+    "price": 59.95,
+    "discount": 0,
+    "priceWithDiscount": 59.95,
+    "colors": ["blue"],
+    "size": ["small", "medium", "large"]
+  },
+  {
+    "id": 2,
+    "title": "Plaid Shirt",
+    "description": "Long sleeve plaid button-up shirt",
+    "type": ["Body", "casual"],
+    "price": 149.99,
+    "discount": 20,
+    "priceWithDiscount": 119.99,
+    "colors": ["red", "blue", "white"],
+    "size": ["small", "medium", "large"]
+  },
+  {
+    "id": 3,
+    "title": "Striped Raglan T-Shirt",
+    "description": "Orange t-shirt with black raglan sleeves and vertical stripes",
+    "type": ["Body", "casual"],
+    "price": 129,
+    "discount": 10,
+    "priceWithDiscount": 116.1,
+    "colors": ["orange", "black"],
+    "size": ["small", "medium", "large"]
+  },
+  {
+    "id": 4,
+    "title": "Black Skinny Jeans",
+    "description": "Solid black skinny jeans",
+    "type": ["Legs", "casual"],
+    "price": 0,
+    "discount": 0,
+    "priceWithDiscount": 0,
+    "colors": ["black"],
+    "size": ["small", "medium", "large"]
+  },
+  {
+    "id": 5,
+    "title": "Denim Shorts",
+    "description": "Light blue washed denim shorts",
+    "type": ["Legs", "casual"],
+    "price": 0,
+    "discount": 0,
+    "priceWithDiscount": 0,
+    "colors": ["blue"],
+    "size": ["small", "medium", "large"]
+  },
+  {
+    "id": 6,
+    "title": "Orange Graphic T-Shirt",
+    "description": "Orange t-shirt with blue printed design on front",
+    "type": ["Body", "casual"],
+    "price": 0,
+    "discount": 0,
+    "priceWithDiscount": 0,
+    "colors": ["orange", "blue", "white"],
+    "size": ["small", "medium", "large"]
+  },
+  {
+    "id": 7,
+    "title": "Green Striped Shirt",
+    "description": "Long sleeve green shirt with thin black stripes",
+    "type": ["Body", "casual"],
+    "price": 0,
+    "discount": 0,
+    "priceWithDiscount": 0,
+    "colors": ["green", "black"],
+    "size": ["small", "medium", "large"]
+  },
+  {
+    "id": 8,
+    "title": "Abstract Print T-Shirt",
+    "description": "White t-shirt with colorful abstract print",
+    "type": ["Body", "casual"],
+    "price": 49.99,
+    "discount": 10,
+    "priceWithDiscount": 44.99,
+    "colors": ["white", "pink", "blue", "yellow", "green"],
+    "size": ["small", "medium", "large"]
+  },
+  {
+    "id": 9,
+    "title": "Polo Shirt",
+    "description": "Short sleeve maroon polo shirt with small logo",
+    "type": ["Body", "casual"],
+    "price": 39.95,
+    "discount": 0,
+    "priceWithDiscount": 39.95,
+    "colors": ["red", "white"],
+    "size": ["small", "medium", "large"]
+  },
+  {
+    "id": 10,
+    "title": "Striped Raglan T-Shirt",
+    "description": "White t-shirt with thin black vertical stripes and black raglan sleeves",
+    "type": ["Body", "casual"],
+    "price": 59.99,
+    "discount": 10,
+    "priceWithDiscount": 53.99,
+    "colors": ["white", "black"],
+    "size": ["small", "medium", "large"]
+  },
+  {
+    "id": 11,
+    "title": "Polo Shirt",
+    "description": "Blue short sleeve polo shirt",
+    "type": ["Body", "casual"],
+    "price": 0,
+    "discount": 0,
+    "priceWithDiscount": 0,
+    "colors": ["blue", "white"],
+    "size": ["small", "medium", "large"]
+  }
+]
