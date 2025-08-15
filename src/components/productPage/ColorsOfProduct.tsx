@@ -14,7 +14,7 @@ export function ColorsOfProduct({productColors, onColorSelect}: Readonly<ColorsO
           let bgColor: string;
 
           if (color === "black" || color === "white") {
-            bgColor = `bg-${color}`;
+            bgColor = `bg-${color} border border-gray-300`;
           } else {
             bgColor = `bg-${color}-500`;
           }
