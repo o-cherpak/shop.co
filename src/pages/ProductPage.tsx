@@ -4,20 +4,24 @@ import {TopSingUp} from "../components/Header/TopSingUp";
 import {ClickedProductSection} from "../components/productPage/ClickedProductSection";
 import {SectionPicker} from "../components/productPage/CommentSection/SectionPicker.tsx";
 import {CommentSection} from "../components/productPage/CommentSection/CommentSection.tsx";
-import {useCallback, useEffect, useState} from "react";
-import {getComments} from "../services/getCommets.ts";
-import type {CustomCommentInterface} from "../interfaces/Comments.ts";
+import {useEffect, useState} from "react";
 import {AlsoLike} from "../components/productPage/AlsoLike.tsx";
-import {getAllProducts} from "../services/getProdutcs.ts";
 import type {Product} from "../interfaces/Products.ts";
 import {Footer} from "../components/homepage/Main/Footer/Footer.tsx";
 import {SubscribeSection} from "../components/homepage/Main/SubscribeSection/SubscribeSection.tsx";
 import {useParams} from "react-router-dom";
+import {useProductsStore} from "../store/useProductsStore.ts";
+import {useCommentsStore} from "../store/useCommentsStore.ts";
 
 export function ProductPage() {
-  const [comments, setComments] = useState<CustomCommentInterface[]>([]);
-  const [products, setProducts] = useState<Product[]>([]);
   const [clickedProduct, setClickedProduct] = useState<Product | null>(null);
+  const {products, fetchProducts} = useProductsStore();
+  const {comments, fetchComments} = useCommentsStore();
+
+  useEffect(() => {
+    fetchComments()
+    fetchComments()
+  }, [fetchComments, fetchProducts]);
 
   const params = useParams();
 
@@ -28,19 +32,6 @@ export function ProductPage() {
 
     setClickedProduct(clickedProduct);
   }, [params.productTitle, products]);
-
-  const fetch = useCallback(async () => {
-    const comments = await getComments();
-    const products = await getAllProducts()
-
-    setComments(comments);
-    setProducts(products);
-  }, []);
-
-  useEffect(() => {
-    fetch();
-  }, [fetch]);
-
 
   return (
     <div>

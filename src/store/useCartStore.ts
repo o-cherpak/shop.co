@@ -14,6 +14,7 @@ export const useCartStore = create<CartState>((set) => ({
     set((state) => {
       const updatedCart = [...state.cart, product];
       localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+
       return { cart: updatedCart };
     });
   },

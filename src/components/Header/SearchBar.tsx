@@ -1,19 +1,14 @@
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {useCallback, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import type {Product} from "../../interfaces/Products.ts";
-import {getAllProducts} from "../../services/getProdutcs.ts";
+import {useProductsStore} from "../../store/useProductsStore.ts";
 
 export function SearchBar() {
-  const [products, setProducts] = useState<Product[]>([]);
   const [searchValue, setSearchValue] = useState("");
   const [similarProducts, setSimilarProducts] = useState<Product[]>([]);
+  const {products, fetchProducts} = useProductsStore();
 
-  const fetchProducts = useCallback(async () => {
-    const data = await getAllProducts();
-
-    setProducts(data);
-  }, []);
 
   useEffect(() => {
     fetchProducts();
