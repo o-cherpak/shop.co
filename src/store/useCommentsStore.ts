@@ -4,7 +4,7 @@ import {database} from "../../firebase-config.ts";
 import type {CustomCommentInterface} from "../interfaces/Comments.ts";
 
 interface CommentsState {
-  comments: CustomCommentInterface[] | null;
+  comments: CustomCommentInterface[];
   loadingComments: boolean;
   error: string | null;
   fetchComments: () => Promise<void>;

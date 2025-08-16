@@ -4,14 +4,14 @@ import {database} from "../../firebase-config.ts";
 import type {Product} from "../interfaces/Products.ts";
 
 interface ProductsState {
-  products: Product[] | null;
+  products: Product[];
   loadingProducts: boolean;
   error: string | null;
   fetchProducts: () => Promise<void>;
 }
 
 export const useProductsStore = create<ProductsState>((set) => ({
-  products: null,
+  products: [],
   loadingProducts: false,
   error: null,
 
