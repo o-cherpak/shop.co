@@ -1,11 +1,18 @@
 import { faAngleRight, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import { Range } from "react-range";
+import {useFilteredProductsStore} from "../../../store/useFilteredProductsStore.ts";
 
 export function PriceRange() {
   const [values, setValues] = useState([0, 490]);
   const [isOpen, setIsOpen] = useState(true);
+
+  const {setPriceRange} = useFilteredProductsStore();
+
+  useEffect(() => {
+    setPriceRange(values);
+  }, [setPriceRange, values]);
 
   const handleOnClickClose = () => {
     setIsOpen(false);

@@ -10,12 +10,7 @@ type TitleAndFilterButtonProps = {
   currentSort: string;
 };
 
-export function TitleAndFilterButton({
-                                       title,
-                                       onFilterClick,
-                                       onSortChange,
-                                       currentSort
-                                     }: Readonly<TitleAndFilterButtonProps>) {
+export function TitleAndFilterButton({title,onFilterClick,onSortChange,currentSort}: Readonly<TitleAndFilterButtonProps>) {
   const filterBy = {
     mostPopular: "Most popular",
     FromMinPrice: "From min price",

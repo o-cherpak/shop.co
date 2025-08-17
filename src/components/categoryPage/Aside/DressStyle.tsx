@@ -1,71 +1,55 @@
-import {
-  faAngleRight,
-  faAngleUp,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import {faAngleRight, faAngleUp, faChevronRight,} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {useState} from "react";
+import {useFilteredProductsStore} from "../../../store/useFilteredProductsStore.ts";
 
 export function DressStyle() {
   const [isOpen, setIsOpen] = useState(true);
 
-  const handleOnClickClose = () => {
-    setIsOpen(false);
-  };
+  const dressStyles = ["casual", "formal", "party", "gym"];
+  const {setStyle, style} = useFilteredProductsStore();
 
-  const handleOnClickOpen = () => {
-    setIsOpen(true);
+  const handleButtonClick = (styleP: string) => {
+    if (styleP === style) {
+      setStyle("");
+    } else {
+      setStyle(styleP);
+    }
   };
 
   return (
     <div className="flex flex-col w-full justify-between items-center">
       <div className="flex w-full justify-between items-center pb-4">
         <h4 className="font-semibold text-xl">Dress Style</h4>
-
-        {isOpen ? (
-          <button onClick={handleOnClickClose} className="flex hover:cursor-pointer">
-            <FontAwesomeIcon icon={faAngleUp} />
-          </button>
-        ) : (
-          <button onClick={handleOnClickOpen} className="flex hover:cursor-pointer">
-            <FontAwesomeIcon icon={faAngleRight} />
-          </button>
-        )}
-      </div>
-
-      <div
-        className={`${
-          isOpen ? "flex" : "hidden"
-        } flex-col w-full gap-2 text-black/60`}
-      >
-        <button className="flex items-center justify-between">
-          Casual{" "}
-          <span>
-            <FontAwesomeIcon icon={faChevronRight} />
-          </span>
-        </button>
-
-        <button className="flex items-center justify-between">
-          Formal{" "}
-          <span>
-            <FontAwesomeIcon icon={faChevronRight} />
-          </span>
-        </button>
-
-        <button className="flex items-center justify-between">
-          Party{" "}
-          <span>
-            <FontAwesomeIcon icon={faChevronRight} />
-          </span>
-        </button>
-
-        <button className="flex items-center justify-between">
-          Gym{" "}
-          <span>
-            <FontAwesomeIcon icon={faChevronRight} />
-          </span>
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex hover:cursor-pointer"
+        >
+          <FontAwesomeIcon icon={isOpen ? faAngleUp : faAngleRight}/>
         </button>
       </div>
+
+      {isOpen && (
+        <div className="flex flex-col w-full gap-2 text-black/60">
+          {dressStyles.map((styleName) => (
+            <button
+              key={styleName}
+              className={`flex items-center justify-between p-1 px-2 rounded ${
+                styleName === style
+                  ? "bg-black text-white"
+                  : "hover:bg-gray-200 hover:text-black"
+              }`}
+              onClick={() => handleButtonClick(styleName)}
+            >
+              {styleName}
+              <span>
+                <FontAwesomeIcon icon={faChevronRight}/>
+              </span>
+            </button>
+          ))}
+
+        </div>
+      )}
     </div>
   );
 }

@@ -1,22 +1,30 @@
-import { faAngleRight, faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import {faAngleRight, faAngleUp} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {useState} from "react";
+import {useFilteredProductsStore} from "../../../store/useFilteredProductsStore.ts";
 
 export function Colors() {
   const [isOpen, setIsOpen] = useState(true);
+  const {colors, addColor, removeColor} = useFilteredProductsStore();
 
   const buttons = [
-    { bg: "bg-green-500", border: "border-green-600" },
-    { bg: "bg-red-500", border: "border-red-600" },
-    { bg: "bg-yellow-500", border: "border-yellow-600" },
-    { bg: "bg-orange-500", border: "border-orange-600" },
-    { bg: "bg-sky-500", border: "border-sky-600" },
-    { bg: "bg-blue-500", border: "border-blue-600" },
-    { bg: "bg-violet-500", border: "border-violet-600" },
-    { bg: "bg-pink-500", border: "border-pink-600" },
-    { bg: "bg-white", border: "border-gray-200" },
-    { bg: "bg-black", border: "border-black" },
+    {color: "green", bg: "bg-green-500", border: "border-green-600"},
+    {color: "red", bg: "bg-red-500", border: "border-red-600"},
+    {color: "yellow", bg: "bg-yellow-500", border: "border-yellow-600"},
+    {color: "orange", bg: "bg-orange-500", border: "border-orange-600"},
+    {color: "sky", bg: "bg-sky-500", border: "border-sky-600"},
+    {color: "blue", bg: "bg-blue-500", border: "border-blue-600"},
+    {color: "violet", bg: "bg-violet-500", border: "border-violet-600"},
+    {color: "pink", bg: "bg-pink-500", border: "border-pink-600"},
+    {color: "white", bg: "bg-white", border: "border-gray-200"},
+    {color: "black", bg: "bg-black", border: "border-black"},
   ];
+
+  const handleButtonClick = (colorP: string) => {
+    if (colors.includes(colorP)) {
+      removeColor(colorP);
+    } else addColor(colorP)
+  }
 
   const handleOnClickClose = () => {
     setIsOpen(false);
@@ -37,11 +45,11 @@ export function Colors() {
 
         {isOpen ? (
           <button onClick={handleOnClickClose} className="flex hover:cursor-pointer">
-            <FontAwesomeIcon icon={faAngleUp} />
+            <FontAwesomeIcon icon={faAngleUp}/>
           </button>
         ) : (
           <button onClick={handleOnClickOpen} className="flex hover:cursor-pointer">
-            <FontAwesomeIcon icon={faAngleRight} />
+            <FontAwesomeIcon icon={faAngleRight}/>
           </button>
         )}
       </div>
@@ -53,9 +61,13 @@ export function Colors() {
       >
         {buttons.map((button, index) => (
           <button
+            onClick={() => handleButtonClick(button.color)}
             key={index}
-            className={`p-4 border-2 rounded-full ${button.bg} ${button.border}`}
+            className={`p-4 border-2 rounded-full hover:scale-110 hover:cursor-pointer duration-200 transition-all
+            ${button.bg} 
+            ${colors.includes(button.color) ? 'border-black scale-110' : button.border}`}
           ></button>
+
         ))}
       </div>
     </div>

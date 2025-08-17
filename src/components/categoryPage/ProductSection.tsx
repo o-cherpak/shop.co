@@ -1,10 +1,11 @@
-import {useMemo, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import type {Product} from "../../interfaces/Products";
 import {Aside} from "./Aside/Aside";
 import {PageNavigator} from "./PageNavigator";
 import {Products} from "./Products";
 import {TitleAndFilterButton} from "./TitleAndFilterButton";
 import type {CustomCommentInterface} from "../../interfaces/Comments.ts";
+import {useFilteredProductsStore} from "../../store/useFilteredProductsStore.ts";
 
 type ProductSectionProps = {
   products: Product[];
@@ -15,13 +16,18 @@ type ProductSectionProps = {
 export function ProductSection({products, isMobile, comments}: Readonly<ProductSectionProps>) {
   const [isFilterButtonClicked, setIsFilterButtonClicked] = useState(false);
   const [sortOption, setSortOption] = useState("Default");
+  const {filteredProducts, setFilteredProducts} = useFilteredProductsStore();
 
   const handleFilterState = (val: boolean) => {
     setIsFilterButtonClicked(val);
   };
 
+  useEffect(() => {
+    setFilteredProducts(products);
+  }, [products, setFilteredProducts]);
+
   const sortedProducts = useMemo(() => {
-    const sorted = [...products];
+    const sorted = [...filteredProducts];
 
     switch (sortOption) {
       case "Most popular":
@@ -45,7 +51,7 @@ export function ProductSection({products, isMobile, comments}: Readonly<ProductS
         break;
     }
     return sorted;
-  }, [comments, products, sortOption]);
+  }, [comments, filteredProducts, sortOption]);
 
   return (
     <section
@@ -54,7 +60,12 @@ export function ProductSection({products, isMobile, comments}: Readonly<ProductS
       } flex flex-col gap-8`}
     >
       <div className="flex gap-8 items-start justify-center">
-        <Aside isFilterButtonClicked={isFilterButtonClicked} onClose={handleFilterState}/>
+        <Aside
+          isFilterButtonClicked={isFilterButtonClicked}
+          onClose={handleFilterState}
+          products={products}
+          setFilteredProducts={setFilteredProducts}
+        />
 
         <div className="">
           <TitleAndFilterButton

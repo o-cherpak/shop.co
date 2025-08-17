@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import {create} from "zustand";
 import type {Product} from "../interfaces/Products.ts";
 
 interface FilteredProductsState {
@@ -6,8 +6,10 @@ interface FilteredProductsState {
   type: string;
   priceRange: number[];
   colors: string[];
-  size: string[];
-  style: string[];
+  sizes: string[];
+  style: string;
+  isAnySelected: boolean;
+
 
   setFilteredProducts: (products: Product[]) => void;
   setType: (type: string) => void;
@@ -16,39 +18,36 @@ interface FilteredProductsState {
   removeColor: (color: string) => void;
   addSize: (size: string) => void;
   removeSize: (size: string) => void;
-  addStyle: (style: string) => void;
-  removeStyle: (style: string) => void;
+  setStyle: (style: string) => void;
 }
+
 
 export const useFilteredProductsStore = create<FilteredProductsState>((set) => ({
   filteredProducts: [],
   type: "",
   priceRange: [],
   colors: [],
-  size: [],
-  style: [],
+  sizes: [],
+  style: "",
+  isAnySelected: false,
 
-  setFilteredProducts: (products) => set({ filteredProducts: products }),
+  setFilteredProducts: (products) => set({filteredProducts: products}),
 
-  setType: (type) => set({ type }),
+  setType: (type) => set({type}),
 
-  setPriceRange: (range) => set({ priceRange: range }),
+  setPriceRange: (range) => set({priceRange: range}),
 
   addColor: (color) =>
-    set((state) => ({ colors: [...state.colors, color] })),
+    set((state) => ({colors: [...state.colors, color]})),
 
   removeColor: (color) =>
-    set((state) => ({ colors: state.colors.filter((c) => c !== color) })),
+    set((state) => ({colors: state.colors.filter((c) => c !== color)})),
 
   addSize: (size) =>
-    set((state) => ({ size: [...state.size, size] })),
+    set((state) => ({sizes: [...state.sizes, size]})),
 
   removeSize: (size) =>
-    set((state) => ({ size: state.size.filter((s) => s !== size) })),
+    set((state) => ({sizes: state.sizes.filter((s) => s !== size)})),
 
-  addStyle: (style) =>
-    set((state) => ({ style: [...state.style, style] })),
-
-  removeStyle: (style) =>
-    set((state) => ({ style: state.style.filter((st) => st !== style) })),
+  setStyle: (style) => set({style}),
 }));
