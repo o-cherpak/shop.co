@@ -15,13 +15,8 @@ import {useCommentsStore} from "../store/useCommentsStore.ts";
 
 export function ProductPage() {
   const [clickedProduct, setClickedProduct] = useState<Product | null>(null);
-  const {products, fetchProducts} = useProductsStore();
-  const {comments, fetchComments} = useCommentsStore();
-
-  useEffect(() => {
-    fetchComments()
-    fetchComments()
-  }, [fetchComments, fetchProducts]);
+  const {products} = useProductsStore();
+  const {comments} = useCommentsStore();
 
   const params = useParams();
 

@@ -11,13 +11,8 @@ import {useCommentsStore} from "../store/useCommentsStore.ts";
 
 export function CategoryPage() {
   const [isMobile, setIsMobile] = useState(false);
-  const {products, fetchProducts, loadingProducts} = useProductsStore();
-  const {comments, fetchComments, loadingComments} = useCommentsStore();
-
-  useEffect(() => {
-    fetchProducts();
-    fetchComments();
-  }, [fetchProducts, fetchComments]);
+  const {products, loadingProducts} = useProductsStore();
+  const {comments, loadingComments} = useCommentsStore();
 
   useEffect(() => {
     const IsDisplayMobile = () => {

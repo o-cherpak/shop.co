@@ -6,15 +6,9 @@ import {OrderSummary} from "../components/cartPage/OrderSummary.tsx";
 import {SubscribeSection} from "../components/homepage/Main/SubscribeSection/SubscribeSection.tsx";
 import {Footer} from "../components/homepage/Main/Footer/Footer.tsx";
 import {useCartStore} from "../store/useCartStore.ts";
-import {useEffect} from "react";
 
 export function CartPage() {
-  const {cart, fetchCart} = useCartStore();
-
-  useEffect(() => {
-    fetchCart();
-  }, [fetchCart]);
-
+  const {cart} = useCartStore();
   return (
     <section>
       <TopSingUp/>
