@@ -28,8 +28,8 @@ export function TitleAndFilterButton({title,onFilterClick,onSortChange,currentSo
   return (
     <div className="relative flex items-end justify-between lg:justify-start">
       <div
-        className="flex justify-between items-end w-full px-4 hover:cursor-pointer"
-        onClick={() => setToggleAngleButton(!toggleAngleButton)}>
+        className="flex justify-between items-end w-full px-4 "
+      >
 
         <div className="flex items-end gap-2">
           <h4 className="font-semibold text-2xl">{title}</h4>
@@ -37,7 +37,9 @@ export function TitleAndFilterButton({title,onFilterClick,onSortChange,currentSo
           <p className="text-black/60">Showing 1-10 of 100 Products</p>
         </div>
 
-        <p className="items-center text-black/60 hidden lg:flex">
+        <p
+          className="items-center text-black/60 hidden lg:flex hover:cursor-pointer"
+          onClick={() => setToggleAngleButton(!toggleAngleButton)}>
           Sorting by:{" "}
           <span className="text-black font-medium mx-1">{currentSort}</span>{" "}
 

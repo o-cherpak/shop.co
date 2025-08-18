@@ -80,7 +80,8 @@ export function ProductSection({products, isMobile, comments}: Readonly<ProductS
             products={sortedProducts}
           />
 
-          <PageNavigator productsLength={products.length}/>
+
+          {filteredProducts.length > 11 && <PageNavigator productsLength={products.length}/>}
         </div>
       </div>
     </section>
