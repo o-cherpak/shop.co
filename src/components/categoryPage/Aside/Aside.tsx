@@ -45,7 +45,7 @@ export function Aside({isFilterButtonClicked, onClose, setFilteredProducts, prod
       .filter(product => !style || product.type[1] === style)
       .filter(product => product.priceWithDiscount > priceRange[0] && product.priceWithDiscount < priceRange[1]);
 
-    window.scrollTo({ top: 0, behavior: "smooth", duration: 300 });
+    window.scrollTo({ top: 0, behavior: "smooth" });
     setFilteredProducts(filteredProducts);
   };
 
