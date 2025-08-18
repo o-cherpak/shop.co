@@ -1,24 +1,27 @@
 import { Link } from "react-router-dom";
+import {useSortingStore} from "../../store/useSortingStore.ts";
 
 export function ListLinks() {
+  const {setSortingOption} = useSortingStore();
+
   return (
     <ul className="hidden lg:flex items-center gap-6">
       
-      <Link to="/CategoryPage">
+      <Link to="/CategoryPage" onClick={() => setSortingOption("Default")}>
         <li className="text-lg">Shop</li>
       </Link>
 
-      <a href="/">
+      <Link to="/CategoryPage">
         <li className="text-lg">On Sale</li>
-      </a>
+      </Link>
 
-      <a href="/">
+      <Link to="/CategoryPage" onClick={() => setSortingOption("New products")}>
         <li className="text-lg">New Arrivals</li>
-      </a>
-      
-      <a href="/">
+      </Link>
+
+      <Link to="/CategoryPage">
         <li className="text-lg">Brands</li>
-      </a>
+      </Link>
     </ul>
   );
 }

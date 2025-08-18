@@ -4,6 +4,7 @@ import {Navigation} from "./Navigation";
 import {ListLinks} from "./ListLinks";
 import {MobileLinks} from "./MobileLinks.tsx";
 import {useState} from "react";
+import {Link} from "react-router-dom";
 
 export function Header() {
   const [toggleMenuButton, setToggleMenuButton] = useState(false);
@@ -15,12 +16,14 @@ export function Header() {
           <FontAwesomeIcon icon={faBars} onClick={() => setToggleMenuButton(!toggleMenuButton)}/>
         </button>
 
-        <h2
+        <Link to={`/`}>
+          <h2
           style={{fontFamily: "Integral CF"}}
           className="font-extrabold text-2xl lg:text-3xl"
         >
           SHOP.CO
         </h2>
+        </Link>
 
         <ListLinks/>
 

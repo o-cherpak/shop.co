@@ -20,6 +20,7 @@ export function Aside({isFilterButtonClicked, onClose, setFilteredProducts, prod
 
   const {type, colors, sizes, style, priceRange} = useFilteredProductsStore();
 
+
   useEffect(() => {
     console.log("Current sizes:", sizes);
   }, [sizes]);
@@ -44,10 +45,9 @@ export function Aside({isFilterButtonClicked, onClose, setFilteredProducts, prod
       .filter(product => !style || product.type[1] === style)
       .filter(product => product.priceWithDiscount > priceRange[0] && product.priceWithDiscount < priceRange[1]);
 
-
+    window.scrollTo({ top: 0, behavior: "smooth", duration: 300 });
     setFilteredProducts(filteredProducts);
   };
-
 
   return (
     <aside

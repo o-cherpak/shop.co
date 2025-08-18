@@ -1,8 +1,10 @@
+import {Link} from "react-router-dom";
+
 export function TextContainer() {
   return (
     <div className="flex flex-col px-2 gap-4 lg:w-1/2">
       <h1
-        style={{ fontFamily: "Integral CF", fontWeight: "bold" }}
+        style={{fontFamily: "Integral CF", fontWeight: "bold"}}
         className="text-bold text-4xl lg:text-5xl"
       >
         FIND CLOTHES THAT MATCHES YOUR STYLE
@@ -14,9 +16,11 @@ export function TextContainer() {
         style.
       </p>
 
-      <button className="bg-black text-base text-white py-2 p-4 lg:px-6 rounded-3xl lg:w-44">
-        Shop Now
-      </button>
+      <Link to={"/CategoryPage"}>
+        <button className="bg-black text-base text-white py-2 p-4 lg:px-6 rounded-3xl lg:w-44 hover:cursor-pointer">
+          Shop Now
+        </button>
+      </Link>
     </div>
   );
 }

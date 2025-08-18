@@ -1,12 +1,17 @@
 import type { Product } from "../../../../interfaces/Products";
 import { Cards } from "./Cards";
+import {Link} from "react-router-dom";
+import {useSortingStore} from "../../../../store/useSortingStore.ts";
 
 type NewArrivalsSectionProps = {
   products: Product[];
   title: string;
+  sortingOption: string;
 };
 
-export function CardSection({ products, title }: Readonly<NewArrivalsSectionProps>) {
+export function CardSection({ products, title, sortingOption }: Readonly<NewArrivalsSectionProps>) {
+  const {setSortingOption} = useSortingStore();
+
   return (
     <section className="pt-12">
       <h2
@@ -19,9 +24,11 @@ export function CardSection({ products, title }: Readonly<NewArrivalsSectionProp
       <Cards products={products} />
 
       <div className="flex justify-center">
-        <button className="mt-1 w-full max-w-xs md:max-w-[200px] border border-black/40 p-2 rounded-3xl shadow-2xl">
-          View All
-        </button>
+        <Link to={"/CategoryPage"} onClick={() => setSortingOption(sortingOption)}>
+          <button className="mt-1 w-full max-w-xs md:max-w-[200px] border border-black/40 p-2 px-6 rounded-3xl shadow-2xl hover:cursor-pointer">
+            View All
+          </button>
+        </Link>
       </div>
     </section>
   );

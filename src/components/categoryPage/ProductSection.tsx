@@ -6,6 +6,7 @@ import {Products} from "./Products";
 import {TitleAndFilterButton} from "./TitleAndFilterButton";
 import type {CustomCommentInterface} from "../../interfaces/Comments.ts";
 import {useFilteredProductsStore} from "../../store/useFilteredProductsStore.ts";
+import {useSortingStore} from "../../store/useSortingStore.ts";
 
 type ProductSectionProps = {
   products: Product[];
@@ -15,8 +16,12 @@ type ProductSectionProps = {
 
 export function ProductSection({products, isMobile, comments}: Readonly<ProductSectionProps>) {
   const [isFilterButtonClicked, setIsFilterButtonClicked] = useState(false);
-  const [sortOption, setSortOption] = useState("Default");
+  const {sortingOption, setSortingOption} = useSortingStore();
   const {filteredProducts, setFilteredProducts} = useFilteredProductsStore();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth", duration: 300 });
+  }, [sortingOption]);
 
   const handleFilterState = (val: boolean) => {
     setIsFilterButtonClicked(val);
@@ -29,7 +34,7 @@ export function ProductSection({products, isMobile, comments}: Readonly<ProductS
   const sortedProducts = useMemo(() => {
     const sorted = [...filteredProducts];
 
-    switch (sortOption) {
+    switch (sortingOption) {
       case "Most popular":
         sorted.sort((a, b) => {
           const countA = comments.filter(c => c.itemId === a.id).length;
@@ -51,7 +56,7 @@ export function ProductSection({products, isMobile, comments}: Readonly<ProductS
         break;
     }
     return sorted;
-  }, [comments, filteredProducts, sortOption]);
+  }, [comments, filteredProducts, sortingOption]);
 
   return (
     <section
@@ -72,8 +77,8 @@ export function ProductSection({products, isMobile, comments}: Readonly<ProductS
             title="Casual"
             isMobile={isMobile}
             onFilterClick={handleFilterState}
-            onSortChange={setSortOption}
-            currentSort={sortOption}
+            onSortChange={setSortingOption}
+            currentSort={sortingOption }
           />
 
           <Products

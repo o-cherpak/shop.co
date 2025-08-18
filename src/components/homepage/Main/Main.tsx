@@ -28,8 +28,8 @@ export function Main() {
         <p>...Loading</p>
       ) : (
         <>
-          <CardSection products={products?.slice(0, 4) || []} title="NEW ARRIVALS"/>
-          <CardSection products={products?.slice(4, 8) || []} title="TOP SELLING"/>
+          <CardSection products={products?.slice(0, 4) || []} title="NEW ARRIVALS" sortingOption={"New products"} />
+          <CardSection products={products?.reverse().slice(0, 4) || []} title="TOP SELLING" sortingOption={"Most popular"} />
         </>
       )}
 

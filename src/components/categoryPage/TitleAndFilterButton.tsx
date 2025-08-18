@@ -11,7 +11,7 @@ type TitleAndFilterButtonProps = {
 };
 
 export function TitleAndFilterButton({title,onFilterClick,onSortChange,currentSort}: Readonly<TitleAndFilterButtonProps>) {
-  const filterBy = {
+  const sortedBy = {
     mostPopular: "Most popular",
     FromMinPrice: "From min price",
     FromMaxPrice: "From max price",
@@ -59,7 +59,7 @@ export function TitleAndFilterButton({title,onFilterClick,onSortChange,currentSo
       {toggleAngleButton && (
         <div className="absolute lg:flex top-8 right-0 w-44 bg-white shadow-lg rounded-b-2xl px-4 py-2 z-1000">
           <ul className="space-y-3">
-            {Object.values(filterBy).map((sort, index) => (
+            {Object.values(sortedBy).map((sort, index) => (
               <li
                 key={index}
                 className="text-lg font-medium text-black/80"
