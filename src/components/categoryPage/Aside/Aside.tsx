@@ -18,7 +18,7 @@ type AsideProps = {
 
 export function Aside({isFilterButtonClicked, onClose, setFilteredProducts, products}: Readonly<AsideProps>) {
 
-  const {type, colors, sizes, style} = useFilteredProductsStore();
+  const {type, colors, sizes, style, priceRange} = useFilteredProductsStore();
 
   useEffect(() => {
     console.log("Current sizes:", sizes);
@@ -41,13 +41,12 @@ export function Aside({isFilterButtonClicked, onClose, setFilteredProducts, prod
       .filter(product => !type || product.type[0] === type)
       .filter(product => colors.length === 0 || product.colors.some(c => colors.includes(c)))
       .filter(product => sizes.length === 0 || product.size.some(s => sizes.includes(s)))
-      .filter(product => !style || product.type[1] === style);
+      .filter(product => !style || product.type[1] === style)
+      .filter(product => product.priceWithDiscount > priceRange[0] && product.priceWithDiscount < priceRange[1]);
 
-    const isAnySelected = !!type || colors.length > 0 || sizes.length > 0 || !!style;
 
-    setFilteredProducts(isAnySelected ? filteredProducts : products);
+    setFilteredProducts(filteredProducts);
   };
-
 
 
   return (
