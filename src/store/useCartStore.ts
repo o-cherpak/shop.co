@@ -10,14 +10,27 @@ interface CartState {
 export const useCartStore = create<CartState>((set) => ({
   cart: [],
 
-  addToCart: (product) => {
+  addToCart: (newProduct) => {
     set((state) => {
-      const updatedCart = [...state.cart, product];
+      let updatedCart = [...state.cart];
+
+      const index = updatedCart.findIndex(
+        (item) =>
+          item.product.id === newProduct.product.id &&
+          item.size === newProduct.size &&
+          item.color === newProduct.color
+      );
+
+      if (index !== -1) updatedCart[index].amount += newProduct.amount;
+      else updatedCart = [...updatedCart, newProduct];
+
+
       localStorage.setItem("cartItems", JSON.stringify(updatedCart));
 
       return { cart: updatedCart };
     });
   },
+
 
   fetchCart: () => {
     const storedData = localStorage.getItem("cartItems");

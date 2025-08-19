@@ -1,6 +1,6 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMinus, faPlus} from "@fortawesome/free-solid-svg-icons";
-import type {Dispatch, SetStateAction} from "react";
+import {type Dispatch, type SetStateAction} from "react";
 
 type ChangeAmountButtonProps = {
   amountP: number;

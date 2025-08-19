@@ -28,6 +28,7 @@ export function ClickedProductSection({product}: Readonly<ClickedProductSectionP
 
   useEffect(() => {
     setShowDiscount(product.discount > 0);
+    window.scrollTo({ top: 0, behavior: "smooth" })
   }, [product]);
 
   const handleButtonClick = (val: boolean, amount: number) => {

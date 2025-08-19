@@ -16,11 +16,10 @@ export function Card({product, showDiscount}: Readonly<ArrivalsCardProps>) {
           src={`/images/clothes${product.id + 1}.png`}
           alt={product.title}
           className="rounded mb-2 w-60"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         />
       </Link>
 
-      <h1 className="font-semibold text-xl mb-1">{product.title}</h1>
+      <Link to={`/CategoryPage/${product.title}`}><h1 className="font-semibold text-xl mb-1">{product.title}</h1></Link>
 
       <div className="flex items-baseline space-x-2 ">
         <p className="text-lg font-bold text-black">

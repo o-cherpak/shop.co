@@ -8,13 +8,13 @@ type CartItemsProps = {
   productWithParam: ProductWithParam;
 }
 
-
 export function CartItem({productWithParam}: Readonly<CartItemsProps>) {
   const [amount, setAmount] = useState<number>(productWithParam.amount);
 
+
   return (
     <div
-      className={"flex items-center gap-4 pb-2 lg:px-4 lg:py-2 lg:pb-6 border-b-[1px] last:border-none last:pb-0 border-b-gray-300"}
+      className={"flex items-center gap-4 pb-2 lg:px-4 lg:py-4 border-b-[1px] last:border-none last:pb-0 border-b-gray-300"}
     >
       <div>
         <img
