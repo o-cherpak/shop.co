@@ -5,6 +5,7 @@ import {ListLinks} from "./ListLinks";
 import {MobileLinks} from "./MobileLinks.tsx";
 import {useState} from "react";
 import {Link} from "react-router-dom";
+import {hoverTextColor} from "../../constants/colors.ts";
 
 export function Header() {
   const [toggleMenuButton, setToggleMenuButton] = useState(false);
@@ -18,12 +19,14 @@ export function Header() {
 
         <Link to={`/`}>
           <h2
-          style={{fontFamily: "Integral CF"}}
-          className="font-extrabold text-2xl lg:text-3xl"
-        >
-          SHOP.CO
-        </h2>
+            style={{ fontFamily: "Integral CF" }}
+            className={`font-extrabold text-2xl lg:text-3xl transition-all duration-200 ease-out hover:scale-110
+              hover:${hoverTextColor} active:scale-95 cursor-pointer`}
+          >
+            SHOP.CO
+          </h2>
         </Link>
+
 
         <ListLinks/>
 
