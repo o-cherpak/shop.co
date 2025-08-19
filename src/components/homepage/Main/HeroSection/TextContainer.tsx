@@ -16,11 +16,11 @@ export function TextContainer() {
         style.
       </p>
 
-      <Link to={"/CategoryPage"}>
-        <button className="bg-black text-base text-white py-2 p-4 lg:px-6 rounded-3xl lg:w-44 hover:cursor-pointer">
-          Shop Now
-        </button>
-      </Link>
+      <button className="bg-black text-base text-white py-2 p-4 lg:px-6 rounded-3xl lg:w-44 hover:cursor-pointer">
+        <Link to={"/CategoryPage"}>
+          Shop now
+        </Link>
+      </button>
     </div>
   );
 }
