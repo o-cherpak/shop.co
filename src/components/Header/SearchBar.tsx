@@ -3,6 +3,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useEffect, useState} from "react";
 import type {Product} from "../../interfaces/Products.ts";
 import {useProductsStore} from "../../store/useProductsStore.ts";
+import {Link} from "react-router-dom";
 
 export function SearchBar() {
   const [searchValue, setSearchValue] = useState("");
@@ -58,7 +59,9 @@ export function SearchBar() {
                 key={product.id}
                 className="p-3 cursor-pointer hover:bg-blue-50 transition-colors"
               >
-                {product.title}
+                <Link to={`/CategoryPage/${product.title}`}>
+                  {product.title}
+                </Link>
               </li>
             ))}
           </ul>
