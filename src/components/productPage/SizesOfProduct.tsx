@@ -19,7 +19,7 @@ export function SizesOfProduct({productSizes, onSizeSelected}: Readonly<SizesOfP
               onSizeSelected(size)
             }}
             key={size}
-            className={`flex w-18 justify-center py-2 px-3 rounded-3xl bg-gray-200 text-black/60`}
+            className={`flex w-20 lg:w-22 justify-center p-2 rounded-3xl bg-gray-200 text-black/60`}
           >
             {size}
           </button>
