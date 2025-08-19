@@ -1,13 +1,14 @@
+
 export function MobileLinks() {
   const links = [
-    { title: "Shop", link: "/shop" },
-    { title: "On Sale", link: "/sale" },
-    { title: "New Arrivals", link: "/new" },
-    { title: "Brands", link: "/brands" }
+    {title: "Shop", link: "/CategoryPage"},
+    {title: "On Sale", link: "/CategoryPage"},
+    {title: "New Arrivals", link: "/CategoryPage"},
+    {title: "Brands", link: "/CategoryPage"}
   ];
 
   return (
-    <div className="absolute lg:flex top-12 right-4 w-full bg-white shadow-lg rounded-b-2xl px-4 py-2">
+    <div className="absolute lg:flex top-12 right-4 w-full bg-white shadow-lg rounded-b-2xl px-4 py-2 z-10">
       <ul className="space-y-3">
         {links.map((item, index) => (
           <li
