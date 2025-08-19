@@ -9,7 +9,7 @@ type ArrivalsCardProps = {
 export function Card({product, showDiscount}: Readonly<ArrivalsCardProps>) {
   return (
     <div
-      className="bg-white rounded-lg p-4 flex-shrink-0 hover:scale-102 transition-transform duration-300 hover:cursor-pointer">
+      className="bg-white rounded-lg p-4 flex-shrink-0 hover:scale-102 transition-transform duration-500 cursor-pointer">
 
       <Link to={`/CategoryPage/${product.title}`}>
         <img

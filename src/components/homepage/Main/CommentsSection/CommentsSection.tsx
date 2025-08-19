@@ -3,6 +3,7 @@ import type { CustomCommentInterface } from "../../../../interfaces/Comments";
 import { CommentsSlider } from "./CommentsSlider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import {hoverTextColor} from "../../../../constants/colors.ts";
 
 type CommentsSectionProps = {
   comments: CustomCommentInterface[];
@@ -42,11 +43,19 @@ export function CommentsSection({ comments }: Readonly<CommentsSectionProps>) {
           OUR HAPPY CUSTOMERS
         </h2>
 
-        <button onClick={scrollLeft} className="text-2xl md:text-3xl pr-4">
+        <button
+          onClick={scrollLeft}
+          className={`text-2xl md:text-3xl pr-4 cursor-pointer 
+          hover:scale-105 hover:${hoverTextColor} transition-all duration-500 active:scale-50`}>
+
           <FontAwesomeIcon icon={faArrowLeft} />
         </button>
 
-        <button onClick={scrollRight} className="text-2xl md:text-3xl">
+        <button
+          onClick={scrollRight}
+          className={`text-2xl md:text-3xl cursor-pointer 
+          hover:scale-105 hover:${hoverTextColor} transition-all duration-500 active:scale-50`}>
+
           <FontAwesomeIcon icon={faArrowRight} />
         </button>
       </div>

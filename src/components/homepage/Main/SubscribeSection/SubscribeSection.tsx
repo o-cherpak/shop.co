@@ -2,6 +2,8 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "emailjs-com";
 import { useState } from "react";
+import {hoverBgColor} from "../../../../constants/colors.ts";
+import {EmojiShoots} from "../../../../services/EmojiShoots.ts";
 
 export function SubscribeSection() {
   const [email, setEmail] = useState<string>("");
@@ -24,7 +26,10 @@ export function SubscribeSection() {
     <section className="p-4 pt-10">
       <form
         action=""
-        onSubmit={(e) => onSubmitHandle(e)}
+        onSubmit={(e) => {
+          onSubmitHandle(e)
+          EmojiShoots();
+        }}
         className="bg-black rounded-2xl p-6 flex flex-col lg:flex-row gap-6 justify-center items-center"
       >
         <h2
@@ -53,7 +58,8 @@ export function SubscribeSection() {
 
           <button
             type="submit"
-            className="bg-white w-full rounded-xl p-2 font-semibold text-lg hover:cursor-pointer"
+            className={`bg-white w-full rounded-xl p-2 font-semibold text-lg cursor-pointer 
+            hover:scale-105 transition-all duration-500 hover:${hoverBgColor} hover:text-white active:scale-60`}
           >
             Subscribe to Newsletter
           </button>

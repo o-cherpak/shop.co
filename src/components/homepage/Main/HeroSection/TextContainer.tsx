@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import {hoverBgColor} from "../../../../constants/colors.ts";
 
 export function TextContainer() {
   return (
@@ -16,7 +17,10 @@ export function TextContainer() {
         style.
       </p>
 
-      <button className="bg-black text-base text-white py-2 p-4 lg:px-6 rounded-3xl lg:w-44 hover:cursor-pointer">
+      <button
+        className={`bg-black text-base text-white py-2 p-4 lg:px-6 rounded-3xl lg:w-44 
+        cursor-pointer transition-all duration-500 hover:${hoverBgColor} hover:scale-105 hover:border active:scale-90`}>
+
         <Link to={"/CategoryPage"}>
           Shop now
         </Link>

@@ -1,6 +1,7 @@
 import {faXmark} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useState} from "react";
+import {hoverTextColor} from "../../constants/colors.ts";
 
 export function TopSingUp() {
   const [isVisible, setIsVisible] = useState(true);
@@ -18,8 +19,13 @@ export function TopSingUp() {
             </a>
         </p>
 
-        <button className="hidden sm:flex justify-items pr-10 hover:cursor-pointer" onClick={() => setIsVisible(false)}>
-            <FontAwesomeIcon icon={faXmark} className="text-white text-xl"/>
+        <button
+            className={`hidden sm:flex justify-items pr-10 cursor-pointer 
+            hover:${hoverTextColor} text-white transition duration-200 ease`}
+
+            onClick={() => setIsVisible(false)}>
+
+            <FontAwesomeIcon icon={faXmark} className="text-xl"/>
         </button>
     </div>
   );
