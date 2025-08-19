@@ -5,18 +5,18 @@ import type {Product} from "../interfaces/Products.ts";
 
 interface ProductsState {
   products: Product[];
-  loadingProducts: boolean;
+  isLoadingProducts: boolean;
   error: string | null;
   fetchProducts: () => Promise<void>;
 }
 
 export const useProductsStore = create<ProductsState>((set) => ({
   products: [],
-  loadingProducts: false,
+  isLoadingProducts: false,
   error: null,
 
   fetchProducts: async () => {
-    set({loadingProducts: true, error: null});
+    set({isLoadingProducts: true, error: null});
 
     try {
       const dbRef = ref(database);
@@ -25,12 +25,12 @@ export const useProductsStore = create<ProductsState>((set) => ({
       if (snapshot.exists()) {
         const dataObj = snapshot.val();
         const productsArray = Object.values(dataObj);
-        set({products: productsArray as Product[], loadingProducts: false});
+        set({products: productsArray as Product[], isLoadingProducts: false});
       } else {
-        set({products: [], loadingProducts: false});
+        set({products: [], isLoadingProducts: false});
       }
     } catch (err) {
-      set({error: (err as Error).message, loadingProducts: false});
+      set({error: (err as Error).message, isLoadingProducts: false});
     }
   }
 }))

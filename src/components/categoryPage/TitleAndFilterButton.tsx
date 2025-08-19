@@ -1,6 +1,7 @@
 import {faAngleDown, faSliders} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useState} from "react";
+import {useFilteredProductsStore} from "../../store/useFilteredProductsStore.ts";
 
 type TitleAndFilterButtonProps = {
   title: string;
@@ -20,6 +21,7 @@ export function TitleAndFilterButton({title,onFilterClick,onSortChange,currentSo
   }
 
   const [toggleAngleButton, setToggleAngleButton] = useState(false);
+  const {filteredProducts} = useFilteredProductsStore();
 
   const handleClickedFilterButton = () => {
     onFilterClick(true);
@@ -34,7 +36,7 @@ export function TitleAndFilterButton({title,onFilterClick,onSortChange,currentSo
         <div className="flex items-end gap-2">
           <h4 className="font-semibold text-2xl">{title}</h4>
 
-          <p className="text-black/60">Showing 1-10 of 100 Products</p>
+          <p className="text-black/60">Showing 1-12 of {filteredProducts.length} Products</p>
         </div>
 
         <p

@@ -10,7 +10,7 @@ import {useEffect} from "react";
 import {useCommentsStore} from "../../../store/useCommentsStore.ts";
 
 export function Main() {
-  const {products, loadingProducts, fetchProducts} = useProductsStore();
+  const {products, isLoadingProducts, fetchProducts} = useProductsStore();
   const {comments, loadingComments, fetchComments} = useCommentsStore();
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export function Main() {
 
       <BrandSection/>
 
-      {loadingProducts ? (
+      {isLoadingProducts ? (
         <p>...Loading</p>
       ) : (
         <>

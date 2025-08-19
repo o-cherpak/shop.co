@@ -20,7 +20,7 @@ export function ProductSection({products, isMobile, comments}: Readonly<ProductS
   const {filteredProducts, setFilteredProducts} = useFilteredProductsStore();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth", duration: 300 });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [sortingOption]);
 
   const handleFilterState = (val: boolean) => {
