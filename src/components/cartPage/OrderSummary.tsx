@@ -46,17 +46,17 @@ function TopSection({subtotal, totalDiscount, DeliveryFee}: {
     <div className={"border-b-[2px] border-gray-200 flex flex-col gap-2 pb-3"}>
       <p className={"text-black/60 flex justify-between"}>
         Subtotal
-        <span className={"text-black font-semibold"}>${subtotal}</span>
+        <span className={"text-black font-semibold"}>${subtotal.toFixed(2)}</span>
       </p>
 
       <p className={"text-black/60 flex justify-between"}>
         Discount
-        <span className={"text-red-500 font-semibold"}>-${totalDiscount}</span>
+        <span className={"text-red-500 font-semibold"}>-${totalDiscount.toFixed(2)}</span>
       </p>
 
       <p className={"text-black/60 flex justify-between"}>
         Delivery Fee
-        <span className={"text-black font-semibold"}>${DeliveryFee}</span>
+        <span className={"text-black font-semibold"}>${DeliveryFee.toFixed(2)}</span>
       </p>
     </div>
   )
