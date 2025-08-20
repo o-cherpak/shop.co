@@ -13,11 +13,11 @@ export function Navigation() {
         <FontAwesomeIcon icon={faSearch}/>
       </button>
 
-      <Link to="/CartPage" className={`flex text-xl hover:${hoverTextColor} transition-all duration-500 ease hover:scale-115 active:scale-90`}>
+      <Link to="/CartPage" className={`flex text-xl ${hoverTextColor} transition-all duration-500 ease hover:scale-115 active:scale-90`}>
         <FontAwesomeIcon icon={faCartShopping}/>
       </Link>
 
-      <Link to="/" className={`flex text-xl hover:${hoverTextColor} transition-all duration-500 ease hover:scale-115 active:scale-90`}>
+      <Link to="/" className={`flex text-xl ${hoverTextColor} transition-all duration-500 ease hover:scale-115 active:scale-90`}>
         <FontAwesomeIcon icon={faUser}/>
       </Link>
     </nav>

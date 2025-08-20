@@ -1,11 +1,12 @@
-import { create } from "zustand";
-import type { ProductWithParam } from "../interfaces/Products.ts";
+import {create} from "zustand";
+import type {ProductWithParam} from "../interfaces/Products.ts";
 
 interface CartState {
   cart: ProductWithParam[];
   addToCart: (product: ProductWithParam) => void;
   fetchCart: () => void;
   updateProductAmount: (product: ProductWithParam, amount: number) => void;
+  deleteProduct: (product: ProductWithParam) => void;
 }
 
 export const useCartStore = create<CartState>((set) => ({
@@ -28,14 +29,14 @@ export const useCartStore = create<CartState>((set) => ({
 
       localStorage.setItem("cartItems", JSON.stringify(updatedCart));
 
-      return { cart: updatedCart };
+      return {cart: updatedCart};
     });
   },
 
 
   fetchCart: () => {
     const storedData = localStorage.getItem("cartItems");
-    set({ cart: storedData ? JSON.parse(storedData) : [] });
+    set({cart: storedData ? JSON.parse(storedData) : []});
   },
 
   updateProductAmount: (productP: ProductWithParam, amount: number) => {
@@ -46,15 +47,27 @@ export const useCartStore = create<CartState>((set) => ({
           product.size === productP.size &&
           product.color === productP.color
         ) {
-          return { ...product, amount };
+          return {...product, amount};
         }
         return product;
       });
 
       localStorage.setItem("cartItems", JSON.stringify(updatedCart));
 
-      return { cart: updatedCart };
+      return {cart: updatedCart};
     });
   },
 
+  deleteProduct: (productP: ProductWithParam) => {
+    set((state) => {
+      const updatedCart = state.cart.filter(product =>
+        !(product.product.id === productP.product.id &&
+          product.size === productP.size &&
+          product.color === productP.color))
+
+      localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+
+      return {cart: updatedCart};
+    })
+  }
 }));

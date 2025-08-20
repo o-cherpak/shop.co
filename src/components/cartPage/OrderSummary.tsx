@@ -2,6 +2,7 @@ import type {ProductWithParam} from "../../interfaces/Products.ts";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRight, faTag} from "@fortawesome/free-solid-svg-icons";
 import {useEffect, useState} from "react";
+import {hoverBgColor} from "../../constants/colors.ts";
 
 type OrderSummaryProps = {
   productsWithParam: ProductWithParam[];
@@ -43,7 +44,8 @@ export function OrderSummary({productsWithParam}: Readonly<OrderSummaryProps>) {
         <BottomSection total={total}/>
       </div>
 
-      <button className={"bg-black text-white rounded-full p-4 w-full flex items-center justify-center gap-2"}>
+      <button className={`bg-black text-white rounded-full p-4 w-full flex items-center justify-center gap-2
+        ${hoverBgColor} transition-all duration-500 cursor-pointer active:scale-60`}>
         Go to Checkout
         <FontAwesomeIcon icon={faArrowRight}/>
       </button>
@@ -88,7 +90,9 @@ function BottomSection({total}: { total: number }) {
           <input type="text" className={""} placeholder={"Add promo code"}/>
         </div>
 
-        <button className={"bg-black text-white w-1/3 rounded-full p-2"}>Apply</button>
+        <button className={`bg-black text-white w-1/3 rounded-full p-2
+          ${hoverBgColor} transition-all duration-500 cursor-pointer active:scale-60`}>
+          Apply</button>
       </div>
     </div>
   )

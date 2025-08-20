@@ -21,7 +21,7 @@ export function TopSingUp() {
 
         <button
             className={`hidden sm:flex justify-items pr-10 cursor-pointer 
-            hover:${hoverTextColor} text-white transition duration-200 ease`}
+            ${hoverTextColor} text-white transition duration-200 ease`}
 
             onClick={() => setIsVisible(false)}>
 

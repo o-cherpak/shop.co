@@ -19,7 +19,7 @@ export function EmptyCartMessage() {
       <Link
         to={"/CategoryPage"}
         className={`px-6 py-2 rounded-full bg-black text-white 
-        cursor-pointer transition-all duration-500 hover:scale-105 active:scale-60 hover:${hoverBgColor} hover:text-white`}>
+        cursor-pointer transition-all duration-500 hover:scale-105 active:scale-60 ${hoverBgColor} hover:text-white`}>
 
         Start Shopping
       </Link>

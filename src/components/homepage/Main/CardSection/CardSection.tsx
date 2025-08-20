@@ -29,7 +29,7 @@ export function CardSection({ products, title, sortingOption }: Readonly<NewArri
           <button
             className={`mt-1 w-full max-w-xs md:max-w-[200px] border border-black/40 p-2 px-6 
               rounded-3xl shadow-2xl cursor-pointer hover:scale-110 
-              hover:${hoverBgColor} hover:text-white transition-all duration-500 ease active:scale-40 hover:border-white`}>
+              ${hoverBgColor} hover:text-white transition-all duration-500 ease active:scale-40 hover:border-white`}>
 
             View All
           </button>

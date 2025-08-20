@@ -11,7 +11,7 @@ type CartItemsProps = {
 
 export function CartItem({productWithParam}: Readonly<CartItemsProps>) {
   const [amount, setAmount] = useState<number>(productWithParam.amount);
-  const {updateProductAmount} = useCartStore();
+  const {updateProductAmount, deleteProduct} = useCartStore();
 
   useEffect(() => {
     updateProductAmount(productWithParam, amount)
@@ -35,7 +35,7 @@ export function CartItem({productWithParam}: Readonly<CartItemsProps>) {
         <h4 className={"flex gap-6 text-xl font-semibold justify-between"}>
           {productWithParam.product.title}
 
-          <span className={"text-red-500"}>
+          <span className={"text-red-500 cursor-pointer hover:text-red-700 active:scale-60 transition-all duration-500"} onClick={() => deleteProduct(productWithParam)}>
             <FontAwesomeIcon icon={faTrashCan}/>
           </span>
         </h4>

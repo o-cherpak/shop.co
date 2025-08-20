@@ -59,7 +59,7 @@ export function SubscribeSection() {
           <button
             type="submit"
             className={`bg-white w-full rounded-xl p-2 font-semibold text-lg cursor-pointer 
-            hover:scale-105 transition-all duration-500 hover:${hoverBgColor} hover:text-white active:scale-60`}
+            hover:scale-105 transition-all duration-500 ${hoverBgColor} hover:text-white active:scale-60`}
           >
             Subscribe to Newsletter
           </button>

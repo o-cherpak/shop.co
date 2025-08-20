@@ -1,6 +1,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMinus, faPlus} from "@fortawesome/free-solid-svg-icons";
 import {type Dispatch, type SetStateAction} from "react";
+import {hoverTextColor} from "../../../constants/colors.ts";
 
 type ChangeAmountButtonProps = {
   amountP: number;
@@ -21,13 +22,13 @@ export function ChangeAmountButton({amountP, setAmount}: ChangeAmountButtonProps
 
   return (
     <div className="flex items-center justify-center gap-2 bg-gray-150 px-4 py-1 rounded-3xl">
-      <button className="">
+      <button className={`cursor-pointer ${hoverTextColor} transition-all duration-500 active:scale-60`}>
         <FontAwesomeIcon onClick={decreaseAmount} icon={faMinus}/>
       </button>
 
       <span className="w-7 px-2">{amountP}</span>
 
-      <button className="">
+      <button className={`cursor-pointer ${hoverTextColor} transition-all duration-500 active:scale-60`}>
         <FontAwesomeIcon
           onClick={() => setAmount((prev) => prev + 1)}
           icon={faPlus}

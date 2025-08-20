@@ -46,7 +46,7 @@ export function CommentsSection({ comments }: Readonly<CommentsSectionProps>) {
         <button
           onClick={scrollLeft}
           className={`text-2xl md:text-3xl pr-4 cursor-pointer 
-          hover:scale-105 hover:${hoverTextColor} transition-all duration-500 active:scale-50`}>
+          hover:scale-105 ${hoverTextColor} transition-all duration-500 active:scale-50`}>
 
           <FontAwesomeIcon icon={faArrowLeft} />
         </button>
@@ -54,7 +54,7 @@ export function CommentsSection({ comments }: Readonly<CommentsSectionProps>) {
         <button
           onClick={scrollRight}
           className={`text-2xl md:text-3xl cursor-pointer 
-          hover:scale-105 hover:${hoverTextColor} transition-all duration-500 active:scale-50`}>
+          hover:scale-105 ${hoverTextColor} transition-all duration-500 active:scale-50`}>
 
           <FontAwesomeIcon icon={faArrowRight} />
         </button>
