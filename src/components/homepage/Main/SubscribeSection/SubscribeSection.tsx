@@ -1,7 +1,7 @@
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "emailjs-com";
-import { useState } from "react";
+import {type FormEvent, useState} from "react";
 import {hoverBgColor} from "../../../../constants/colors.ts";
 import {EmojiShoots} from "../../../../services/EmojiShoots.ts";
 
@@ -13,7 +13,7 @@ export function SubscribeSection() {
   const TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
   const EMAIL_PUBLIC_ID = import.meta.env.VITE_EMAIL_PUBLIC_ID;
 
-  const onSubmitHandle = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmitHandle = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs

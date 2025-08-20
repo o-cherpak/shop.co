@@ -1,8 +1,9 @@
 import type {ProductWithParam} from "../../interfaces/Products.ts";
 import {ChangeAmountButton} from "../productPage/CommentSection/ChangeAmountButton.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTrashCan} from "@fortawesome/free-solid-svg-icons";
+import {useCartStore} from "../../store/useCartStore.ts";
 
 type CartItemsProps = {
   productWithParam: ProductWithParam;
@@ -10,6 +11,12 @@ type CartItemsProps = {
 
 export function CartItem({productWithParam}: Readonly<CartItemsProps>) {
   const [amount, setAmount] = useState<number>(productWithParam.amount);
+  const {updateProductAmount} = useCartStore();
+
+  useEffect(() => {
+    updateProductAmount(productWithParam, amount)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [amount]);
 
 
   return (

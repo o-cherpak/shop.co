@@ -18,9 +18,11 @@ export function OrderSummary({productsWithParam}: Readonly<OrderSummaryProps>) {
       (acc, item) => acc + item.product.price * item.amount, 0
     );
 
-    const newDiscount = productsWithParam.reduce(
+    let newDiscount = productsWithParam.reduce(
       (acc, item) => acc + (item.product.price - item.product.priceWithDiscount) * item.amount, 0
     );
+
+    newDiscount = Math.abs(newDiscount);
 
     const newDeliveryFee = productsWithParam.length > 0 ? 15 : 0;
 
@@ -77,7 +79,7 @@ function TopSection({subtotal, totalDiscount, deliveryFee}: {
 function BottomSection({total}: { total: number }) {
   return (
     <div className={"pt-3 space-y-2 pb-4"}>
-      <p className={"flex justify-between"}>Total <span className={"font-bold text-xl"}>${total}</span></p>
+      <p className={"flex justify-between"}>Total <span className={"font-bold text-xl"}>${total.toFixed(2)}</span></p>
 
       <div className={"w-full flex items-center justify-center gap-2"}>
         <div className={"bg-gray-200 w-2/3 rounded-full p-2 px-4 flex items-end gap-2"}>

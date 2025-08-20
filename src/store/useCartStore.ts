@@ -5,6 +5,7 @@ interface CartState {
   cart: ProductWithParam[];
   addToCart: (product: ProductWithParam) => void;
   fetchCart: () => void;
+  updateProductAmount: (product: ProductWithParam, amount: number) => void;
 }
 
 export const useCartStore = create<CartState>((set) => ({
@@ -36,4 +37,24 @@ export const useCartStore = create<CartState>((set) => ({
     const storedData = localStorage.getItem("cartItems");
     set({ cart: storedData ? JSON.parse(storedData) : [] });
   },
+
+  updateProductAmount: (productP: ProductWithParam, amount: number) => {
+    set((state) => {
+      const updatedCart = state.cart.map((product) => {
+        if (
+          product.product.id === productP.product.id &&
+          product.size === productP.size &&
+          product.color === productP.color
+        ) {
+          return { ...product, amount };
+        }
+        return product;
+      });
+
+      localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+
+      return { cart: updatedCart };
+    });
+  },
+
 }));
