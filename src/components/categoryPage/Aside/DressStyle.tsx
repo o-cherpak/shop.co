@@ -6,7 +6,7 @@ import {useFilteredProductsStore} from "../../../store/useFilteredProductsStore.
 export function DressStyle() {
   const [isOpen, setIsOpen] = useState(true);
 
-  const dressStyles = ["casual", "formal", "party", "gym"];
+  const dressStyles = ["Casual", "Formal", "Party", "Gym"];
   const {setStyle, style} = useFilteredProductsStore();
 
   const handleButtonClick = (styleP: string) => {
@@ -35,11 +35,11 @@ export function DressStyle() {
             <button
               key={styleName}
               className={`flex items-center justify-between p-1 px-2 rounded ${
-                styleName === style
+                styleName.toLowerCase() === style.toLowerCase()
                   ? "bg-black text-white"
                   : "hover:bg-gray-200 hover:text-black"
               }`}
-              onClick={() => handleButtonClick(styleName)}
+              onClick={() => handleButtonClick(styleName.toLowerCase())}
             >
               {styleName}
               <span>

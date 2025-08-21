@@ -19,7 +19,9 @@ export function Card({product, showDiscount}: Readonly<ArrivalsCardProps>) {
         />
       </Link>
 
-      <Link to={`/CategoryPage/${product.title}`}><h1 className="font-semibold text-xl mb-1">{product.title}</h1></Link>
+      <Link to={`/CategoryPage/${product.title}`}>
+        <h1 className="font-semibold text-xl mb-1">{product.title}</h1>
+      </Link>
 
       <div className="flex items-baseline space-x-2 ">
         <p className="text-lg font-bold text-black">
