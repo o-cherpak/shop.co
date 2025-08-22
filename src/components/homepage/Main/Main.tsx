@@ -11,7 +11,7 @@ import {useCommentsStore} from "../../../store/useCommentsStore.ts";
 
 export function Main() {
   const {products, isLoadingProducts, fetchProducts} = useProductsStore();
-  const {comments, loadingComments, fetchComments} = useCommentsStore();
+  const {comments, isLoadingComments, fetchComments} = useCommentsStore();
 
   useEffect(() => {
     fetchProducts();
@@ -28,16 +28,26 @@ export function Main() {
         <p>...Loading</p>
       ) : (
         <>
-          <CardSection products={products?.slice(0, 4) || []} title="NEW ARRIVALS" sortingOption={"New products"} />
-          <CardSection products={products?.reverse().slice(0, 4) || []} title="TOP SELLING" sortingOption={"Most popular"} />
+          <CardSection
+            products={products?.slice(0, 4) || []}
+            title="NEW ARRIVALS"
+            sortingOption={"New products"}
+          />
+
+          <CardSection
+            products={products?.reverse().slice(0, 4) || []}
+            title="TOP SELLING"
+            sortingOption={"Most popular"}
+          />
         </>
       )}
 
       <DressStyleSection/>
 
 
-      {loadingComments ? (
+      {isLoadingComments ? (
         <p>...Loading comments</p>
+
       ) : (
         <>
           <CommentsSection comments={comments?.slice(0, 5) || []}/>
