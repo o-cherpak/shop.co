@@ -20,7 +20,6 @@ export function ClickedProductSection({product}: Readonly<ClickedProductSectionP
   }, [fetchCart]);
 
   const [showDiscount, setShowDiscount] = useState<boolean>(false);
-  const [isCartClicked, setIsCartClicked] = useState<boolean>(false);
 
   const [size, setSize] = useState<string>("Large");
   const [color, setColor] = useState<string>("Blue");
@@ -31,12 +30,8 @@ export function ClickedProductSection({product}: Readonly<ClickedProductSectionP
     window.scrollTo({ top: 0, behavior: "smooth" })
   }, [product]);
 
-  const handleButtonClick = (val: boolean, amount: number) => {
-    setIsCartClicked(val);
-
-    if (isCartClicked) {
+  const handleButtonClick = (amount: number) => {
       addToCart({product, size, color, amount})
-    }
   };
 
   return (

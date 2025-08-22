@@ -2,7 +2,7 @@ import {useState} from "react";
 import {ChangeAmountButton} from "./CommentSection/ChangeAmountButton.tsx";
 
 type CartButtonProps = {
-  onClick: (val: boolean, amount: number) => void;
+  onClick: (amount: number) => void;
 }
 
 export function CartButton({onClick}: Readonly<CartButtonProps>) {
@@ -16,7 +16,7 @@ export function CartButton({onClick}: Readonly<CartButtonProps>) {
 
       <button
         className="bg-black text-white w-full py-3 rounded-3xl hover:cursor-pointer"
-        onClick={() => onClick(true, amount)}
+        onClick={() => onClick(amount)}
       >
         Add to Cart
       </button>
