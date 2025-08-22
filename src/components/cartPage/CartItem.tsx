@@ -46,7 +46,9 @@ export function CartItem({productWithParam}: Readonly<CartItemsProps>) {
         </div>
 
         <div className={"flex items-center justify-between"}>
-          <p className={"text-lg lg:text-xl font-semibold"}>${(productWithParam.product.price) * productWithParam.amount}</p>
+          <p className={"text-lg lg:text-xl font-semibold"}>
+            ${(productWithParam.product.price) * productWithParam.amount}
+          </p>
 
           <ChangeAmountButton amountP={amount} setAmount={setAmount}/>
         </div>

@@ -7,8 +7,8 @@ type CustomCommentProps = {
 }
 
 export function CustomComment({comment}: Readonly<CustomCommentProps>) {
-  function formatDate(str: string): string {
-    const date = new Date(str);
+  function formatDate(): string {
+    const date = new Date;
 
     return date.toLocaleDateString("en-US", {
       day: "numeric",
@@ -26,7 +26,7 @@ export function CustomComment({comment}: Readonly<CustomCommentProps>) {
 
       <p>{comment.text}</p>
 
-      <p className={"text-black/60"}>Posted on {formatDate(comment.date)}</p>
+      <p className={"text-black/60"}>Posted on {formatDate()}</p>
     </div>
   )
 }
