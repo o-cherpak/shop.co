@@ -12,7 +12,7 @@ import {useCommentsStore} from "../store/useCommentsStore.ts";
 export function CategoryPage() {
   const [isMobile, setIsMobile] = useState(false);
   const {products, isLoadingProducts} = useProductsStore();
-  const {comments, loadingComments} = useCommentsStore();
+  const {comments, isLoadingComments} = useCommentsStore();
 
   useEffect(() => {
     const IsDisplayMobile = () => {
@@ -32,7 +32,7 @@ export function CategoryPage() {
       <BreadCrumbs/>
 
       <div>
-        {(isLoadingProducts && loadingComments) ? (
+        {(isLoadingProducts && isLoadingComments) ? (
           <p>...Loading products</p>
         ) : (
           <ProductSection products={products} comments={comments} isMobile={isMobile}/>

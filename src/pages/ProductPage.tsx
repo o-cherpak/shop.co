@@ -9,7 +9,7 @@ import {AlsoLike} from "../components/productPage/AlsoLike.tsx";
 import type {Product} from "../interfaces/Products.ts";
 import {Footer} from "../components/homepage/Main/Footer/Footer.tsx";
 import {SubscribeSection} from "../components/homepage/Main/SubscribeSection/SubscribeSection.tsx";
-import {useParams} from "react-router-dom";
+import { useParams} from "react-router-dom";
 import {useProductsStore} from "../store/useProductsStore.ts";
 import {useCommentsStore} from "../store/useCommentsStore.ts";
 
@@ -20,13 +20,15 @@ export function ProductPage() {
 
   const params = useParams();
 
+
   useEffect(() => {
     const clickedProduct = products.find((product) => product.title === (params.productTitle));
 
     if (!clickedProduct) return;
-
     setClickedProduct(clickedProduct);
+
   }, [params.productTitle, products]);
+
 
   return (
     <div>

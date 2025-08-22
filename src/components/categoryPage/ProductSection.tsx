@@ -19,10 +19,6 @@ export function ProductSection({products, isMobile, comments}: Readonly<ProductS
   const {sortingOption, setSortingOption} = useSortingStore();
   const {filteredProducts, setFilteredProducts} = useFilteredProductsStore();
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [sortingOption]);
-
   const handleFilterState = (val: boolean) => {
     setIsFilterButtonClicked(val);
   };

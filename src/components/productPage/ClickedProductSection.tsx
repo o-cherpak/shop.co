@@ -6,6 +6,7 @@ import {ColorsOfProduct} from "./ColorsOfProduct.tsx";
 import {SizesOfProduct} from "./SizesOfProduct.tsx";
 import {CartButton} from "./CartButton.tsx";
 import {useCartStore} from "../../store/useCartStore.ts";
+import {useCommentsStore} from "../../store/useCommentsStore.ts";
 
 
 type ClickedProductSectionProps = {
@@ -14,6 +15,7 @@ type ClickedProductSectionProps = {
 
 export function ClickedProductSection({product}: Readonly<ClickedProductSectionProps>) {
   const {fetchCart, addToCart} = useCartStore();
+  const {comments, fetchComments} = useCommentsStore();
 
   useEffect(() => {
     fetchCart();
@@ -27,8 +29,11 @@ export function ClickedProductSection({product}: Readonly<ClickedProductSectionP
 
   useEffect(() => {
     setShowDiscount(product.discount > 0);
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }, [product]);
+    
+    if (comments.length === 0) {
+      fetchComments();
+    }
+  }, [comments.length, fetchComments, product]);
 
   const handleButtonClick = (amount: number) => {
       addToCart({product, size, color, amount})

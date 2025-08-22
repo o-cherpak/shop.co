@@ -5,18 +5,18 @@ import type {CustomCommentInterface} from "../interfaces/Comments.ts";
 
 interface CommentsState {
   comments: CustomCommentInterface[];
-  loadingComments: boolean;
+  isLoadingComments: boolean;
   error: string | null;
   fetchComments: () => Promise<void>;
 }
 
 export const useCommentsStore = create<CommentsState>((set) => ({
   comments: [] as CustomCommentInterface[],
-  loadingComments: false,
+  isLoadingComments: false,
   error: null,
 
   fetchComments: async () => {
-    set({loadingComments: true, error: null});
+    set({isLoadingComments: true, error: null});
 
     try {
       const dbRef = ref(database);
@@ -26,12 +26,12 @@ export const useCommentsStore = create<CommentsState>((set) => ({
         const dataObj = snapshot.val();
         const commentsArray = Object.values(dataObj);
 
-        set({comments: commentsArray as CustomCommentInterface[], loadingComments: false});
+        set({comments: commentsArray as CustomCommentInterface[], isLoadingComments: false});
       } else {
-        set({comments: [], loadingComments: false});
+        set({comments: [], isLoadingComments: false});
       }
     } catch (err) {
-      set({error: (err as Error).message, loadingComments: false});
+      set({error: (err as Error).message, isLoadingComments: false});
     }
   }
 }))

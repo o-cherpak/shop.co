@@ -8,7 +8,7 @@ import Lenis from "lenis";
 import {useEffect} from "react";
 
 
-function App() {
+export function App() {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -35,4 +35,3 @@ function App() {
   );
 }
 
-export default App;
