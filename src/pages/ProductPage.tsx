@@ -15,6 +15,7 @@ import {useCommentsStore} from "../store/useCommentsStore.ts";
 
 export function ProductPage() {
   const [clickedProduct, setClickedProduct] = useState<Product | null>(null);
+  const [selectedSection, setSelectedSection] = useState<"productsDetails" | "comments" | "faq">("comments");
   const {products} = useProductsStore();
   const {comments} = useCommentsStore();
 
@@ -41,9 +42,9 @@ export function ProductPage() {
 
       {clickedProduct && <ClickedProductSection product={clickedProduct}/>}
 
-      <SectionPicker/>
+      <SectionPicker selectedSection={selectedSection} setSelectedSection={setSelectedSection}/>
 
-      <CommentSection comments={comments}/>
+      {selectedSection == "comments" && <CommentSection comments={comments}/>}
 
       <AlsoLike products={products}/>
 
