@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {ChangeAmountButton} from "./CommentSection/ChangeAmountButton.tsx";
+import {hoverBgColor} from "../../constants/colors.ts";
 
 type CartButtonProps = {
   onClick: (amount: number) => void;
@@ -15,7 +16,8 @@ export function CartButton({onClick}: Readonly<CartButtonProps>) {
       <ChangeAmountButton amountP={amount} setAmount={setAmount}/>
 
       <button
-        className="bg-black text-white w-full py-3 rounded-3xl hover:cursor-pointer"
+        className={`bg-black text-white w-full py-3 rounded-3xl cursor-pointer ${hoverBgColor} 
+        transition-all duration-500 active:scale-60`}
         onClick={() => onClick(amount)}
       >
         Add to Cart

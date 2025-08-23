@@ -1,9 +1,10 @@
 type SizesOfProductProps = {
   productSizes: string[];
   onSizeSelected: (size: string) => void;
+  selectedSize: string;
 };
 
-export function SizesOfProduct({productSizes, onSizeSelected}: Readonly<SizesOfProductProps>) {
+export function SizesOfProduct({productSizes, onSizeSelected, selectedSize}: Readonly<SizesOfProductProps>) {
   return (
     <div
       className={
@@ -19,7 +20,9 @@ export function SizesOfProduct({productSizes, onSizeSelected}: Readonly<SizesOfP
               onSizeSelected(size)
             }}
             key={size}
-            className={`flex w-20 lg:w-22 justify-center p-2 rounded-3xl bg-gray-200 text-black/60`}
+            className={`flex w-20 lg:w-22 justify-center p-2 rounded-3xl text-black/60 cursor-pointer 
+            transition-all duration-500 active:scale-60 hover:bg-gray-300
+            ${selectedSize === size ? "bg-black text-white" : "bg-gray-200"}`}
           >
             {size}
           </button>

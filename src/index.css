@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import 'lenis/dist/lenis.css';
 
 @theme {
   --color-gray-150: #f2f0f1;

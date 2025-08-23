@@ -46,9 +46,17 @@ export function ClickedProductSection({product}: Readonly<ClickedProductSectionP
       <div className={"px-6 flex flex-col gap-4 lg:gap-6 lg:w-3/7"}>
         <TextOfProduct product={product} showDiscount={showDiscount}/>
 
-        <ColorsOfProduct productColors={product.colors} onColorSelect={setColor}/>
+        <ColorsOfProduct
+          productColors={product.colors}
+          onColorSelect={setColor}
+          selectedColor={color}
+        />
 
-        <SizesOfProduct productSizes={product.size} onSizeSelected={setSize}/>
+        <SizesOfProduct
+          productSizes={product.size}
+          onSizeSelected={setSize}
+          selectedSize={size}
+        />
 
         <CartButton onClick={handleButtonClick}/>
       </div>
