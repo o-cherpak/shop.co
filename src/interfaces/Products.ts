@@ -1,6 +1,7 @@
 export interface Product {
   title: string;
   description: string;
+  details: string;
   type: string[];
   price: number;
   discount: number;

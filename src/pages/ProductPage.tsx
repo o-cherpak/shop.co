@@ -12,6 +12,7 @@ import {SubscribeSection} from "../components/homepage/Main/SubscribeSection/Sub
 import { useParams} from "react-router-dom";
 import {useProductsStore} from "../store/useProductsStore.ts";
 import {useCommentsStore} from "../store/useCommentsStore.ts";
+import {ProductDetails} from "../components/productPage/ProductDetails.tsx";
 
 export function ProductPage() {
   const [clickedProduct, setClickedProduct] = useState<Product | null>(null);
@@ -45,6 +46,7 @@ export function ProductPage() {
       <SectionPicker selectedSection={selectedSection} setSelectedSection={setSelectedSection}/>
 
       {selectedSection == "comments" && <CommentSection comments={comments}/>}
+      {selectedSection == "productsDetails" && <ProductDetails product={clickedProduct}/>}
 
       <AlsoLike products={products}/>
 

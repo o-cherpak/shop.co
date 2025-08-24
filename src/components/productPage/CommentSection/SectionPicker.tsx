@@ -44,7 +44,7 @@ export function SectionButtonPicker({title, section, setSelectedSection, selecte
   return (
     <button
       onClick={() => setSelectedSection(section)}
-      className={`${selectedSection === section ? "font-semibold" : "font-normal"}`}
+      className={`cursor-pointer ${selectedSection === section ? "font-semibold" : "font-normal"}`}
     >
       {title}
     </button>
