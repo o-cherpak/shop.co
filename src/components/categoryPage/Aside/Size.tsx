@@ -54,23 +54,23 @@ export function Size() {
         )}
       </div>
 
-      <div
-        className={`${
-          isOpen ? "grid" : "hidden"
-        } grid-cols-3 lg:grid-cols-2 gap-4`}
-      >
-        {sizesArray.map((size, index) => (
-          <button
-            key={index}
-            onClick={() => handleButtonClick(size)}
-            className={`${sizes.includes(size) ?
-              `bg-black text-white hover:bg-black/80` : `bg-gray-200 text-black/60 hover:bg-gray-300`}
+        <div
+          className={`${
+            isOpen ? "grid" : "hidden"
+          } grid-cols-3 lg:grid-cols-2 gap-4 justify-center items-center w-full`}
+        >
+          {sizesArray.map((size, index) => (
+            <button
+              key={index}
+              onClick={() => handleButtonClick(size)}
+              className={`${sizes.includes(size) ?
+                `bg-black text-white hover:bg-black/80` : `bg-gray-200 text-black/60 hover:bg-gray-300`}
             flex justify-center p-2 px-3 rounded-3xl hover:cursor-pointer transition-all duration-300`}
-          >
-            {size}
-          </button>
-        ))}
-      </div>
+            >
+              {size}
+            </button>
+          ))}
+        </div>
     </div>
   );
 }

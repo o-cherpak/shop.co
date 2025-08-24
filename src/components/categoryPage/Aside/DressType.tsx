@@ -21,7 +21,7 @@ export function DressType() {
         {types.map((t) => (
           <li
             key={t}
-            className={`flex justify-between items-center px-2 py-1 rounded hover:cursor-pointer transition-all ${
+            className={`flex justify-between items-center px-2 py-1 rounded cursor-pointer transition-all ${
               type === t ? "bg-black text-white" : "hover:bg-gray-200 hover:text-black"
             }`}
           >

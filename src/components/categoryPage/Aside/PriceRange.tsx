@@ -42,7 +42,7 @@ export function PriceRange() {
         )}
       </div>
 
-      <div className={`${isOpen ? "" : "hidden"}`}>
+      <div className={`${isOpen ? "flex" : "hidden"} justify-center w-full`}>
         <Range
           step={10}
           min={0}
@@ -55,7 +55,7 @@ export function PriceRange() {
               style={{
                 ...props.style,
                 height: "6px",
-                width: "100%",
+                width: "94%",
                 backgroundColor: "#F0F0F0",
                 borderRadius: "100px",
               }}
