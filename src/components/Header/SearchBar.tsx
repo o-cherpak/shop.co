@@ -53,14 +53,20 @@ export function SearchBar() {
         />
 
         {similarProducts.length > 0 && (
-          <ul className="absolute z-10 mt-2 bg-white shadow-lg rounded-xl w-full overflow-hidden">
+          <ul className="absolute z-10 mt-2 bg-white shadow-lg rounded-xl overflow-hidden">
             {similarProducts.map((product) => (
               <li
                 key={product.id}
                 className="p-3 cursor-pointer hover:bg-blue-50 transition-colors"
               >
-                <Link to={`/CategoryPage/${product.title}`}>
-                  {product.title}
+                <Link to={`/CategoryPage/${product.title}`} className={"flex items-center gap-6 justify-between"}>
+                  <p>{product.title}</p>
+
+                  <img
+                    src={`/images/clothes${product.id + 1}.png`}
+                    alt={product.title}
+                    className="rounded w-8"
+                  />
                 </Link>
               </li>
             ))}
