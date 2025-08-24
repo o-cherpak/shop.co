@@ -7,6 +7,7 @@ import {SizesOfProduct} from "./SizesOfProduct.tsx";
 import {CartButton} from "./CartButton.tsx";
 import {useCartStore} from "../../store/useCartStore.ts";
 import {useCommentsStore} from "../../store/useCommentsStore.ts";
+import {toast, Toaster} from "react-hot-toast";
 
 
 type ClickedProductSectionProps = {
@@ -23,24 +24,35 @@ export function ClickedProductSection({product}: Readonly<ClickedProductSectionP
 
   const [showDiscount, setShowDiscount] = useState<boolean>(false);
 
-  const [size, setSize] = useState<string>("Large");
-  const [color, setColor] = useState<string>("Blue");
+  const [size, setSize] = useState<string>("");
+  const [color, setColor] = useState<string>("");
 
 
   useEffect(() => {
     setShowDiscount(product.discount > 0);
-    
+
     if (comments.length === 0) {
       fetchComments();
     }
   }, [comments.length, fetchComments, product]);
 
   const handleButtonClick = (amount: number) => {
-      addToCart({product, size, color, amount})
+    if (color === "") {
+      toast.error("Please select a color");
+    } else if (size === "") {
+      toast.error("Please select a size");
+    } else {
+      addToCart({ product, size, color, amount });
+      toast.success("Added to cart!");
+    }
   };
 
   return (
     <section className="lg:flex lg:flex-row gap-4">
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
       <ImagesOfProduct productId={product.id}/>
 
       <div className={"px-6 flex flex-col gap-4 lg:gap-6 lg:w-3/7"}>
