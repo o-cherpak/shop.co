@@ -9,10 +9,11 @@ import {AlsoLike} from "../components/productPage/AlsoLike.tsx";
 import type {Product} from "../interfaces/Products.ts";
 import {Footer} from "../components/homepage/Main/Footer/Footer.tsx";
 import {SubscribeSection} from "../components/homepage/Main/SubscribeSection/SubscribeSection.tsx";
-import { useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {useProductsStore} from "../store/useProductsStore.ts";
 import {useCommentsStore} from "../store/useCommentsStore.ts";
 import {ProductDetails} from "../components/productPage/ProductDetails.tsx";
+import {Faq} from "../components/productPage/Faq.tsx";
 
 export function ProductPage() {
   const [clickedProduct, setClickedProduct] = useState<Product | null>(null);
@@ -47,6 +48,7 @@ export function ProductPage() {
 
       {selectedSection == "comments" && <CommentSection comments={comments}/>}
       {selectedSection == "productsDetails" && <ProductDetails product={clickedProduct}/>}
+      {selectedSection == "faq" && <Faq/>}
 
       <AlsoLike products={products}/>
 
