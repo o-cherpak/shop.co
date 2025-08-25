@@ -8,8 +8,6 @@ interface FilteredProductsState {
   colors: string[];
   sizes: string[];
   style: string;
-  isAnySelected: boolean;
-
 
   setFilteredProducts: (products: Product[]) => void;
   setType: (type: string) => void;
@@ -19,6 +17,7 @@ interface FilteredProductsState {
   addSize: (size: string) => void;
   removeSize: (size: string) => void;
   setStyle: (style: string) => void;
+  resetFilters: (product: Product[]) => void;
 }
 
 
@@ -29,7 +28,6 @@ export const useFilteredProductsStore = create<FilteredProductsState>((set) => (
   colors: [],
   sizes: [],
   style: "",
-  isAnySelected: false,
 
   setFilteredProducts: (products) => set({filteredProducts: products}),
 
@@ -50,4 +48,15 @@ export const useFilteredProductsStore = create<FilteredProductsState>((set) => (
     set((state) => ({sizes: state.sizes.filter((s) => s !== size)})),
 
   setStyle: (style) => set({style}),
+
+  resetFilters: (product: Product[]) => set(
+    {
+      filteredProducts: product,
+      type: "",
+      priceRange: [],
+      colors: [],
+      sizes: [],
+      style: "",
+    }
+  ),
 }));
