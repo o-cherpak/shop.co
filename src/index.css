@@ -2,6 +2,7 @@
 
 @theme {
   --color-gray-150: #f2f0f1;
+  --font-internal: "Integral CF", sans-serif;
 }
 
 html {

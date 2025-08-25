@@ -1,9 +1,10 @@
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import emailjs from "emailjs-com";
 import {type FormEvent, useState} from "react";
 import {hoverBgColor} from "../../../../constants/colors.ts";
 import {EmojiShoots} from "../../../../services/EmojiShoots.ts";
+import {toast, Toaster} from "react-hot-toast";
 
 export function SubscribeSection() {
   const [email, setEmail] = useState<string>("");
@@ -18,12 +19,14 @@ export function SubscribeSection() {
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, EMAIL_PUBLIC_ID)
-      .then(() => console.log("Email sent successfully!"))
-      .catch((error) => console.error("Error sending email:", error));
+      .then(() => toast.success("Subscribe email sent successfully"))
+      .catch((error) => toast.error(`Error sending email: ${error}`));
   };
 
   return (
     <section className="p-4 pt-10">
+      <Toaster/>
+
       <form
         action=""
         onSubmit={(e) => {
@@ -33,8 +36,7 @@ export function SubscribeSection() {
         className="bg-black rounded-2xl p-6 flex flex-col lg:flex-row gap-6 justify-center items-center"
       >
         <h2
-          style={{ fontFamily: "Integral CF", fontWeight: "bold" }}
-          className="text-bold text-3xl lg:text-4xl text-white lg:w-1/2"
+          className="text-bold text-3xl lg:text-4xl text-white lg:w-1/2 font-internal font-bold"
         >
           STAY UPTO DATE ABOUT OUR LATEST OFFERS
         </h2>
@@ -42,7 +44,7 @@ export function SubscribeSection() {
         <div className="flex flex-col gap-4 lg:w-1/4 justify-center items-center ">
           <div className="bg-white flex items-center w-full px-4 py-2 rounded-xl gap-2">
             <div className="flex pt-[1px]">
-              <FontAwesomeIcon icon={faEnvelope} color="gray" />
+              <FontAwesomeIcon icon={faEnvelope} color="gray"/>
             </div>
 
             <input

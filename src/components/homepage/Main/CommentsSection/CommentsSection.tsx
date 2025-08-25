@@ -37,8 +37,7 @@ export function CommentsSection({ comments }: Readonly<CommentsSectionProps>) {
     <section>
       <div className="flex items-end md:items-center justify-between pb-6 px-6 md:px-10">
         <h2
-          style={{ fontFamily: "Integral CF", fontWeight: "bold" }}
-          className="text-4xl text-left md:text-center grow"
+          className="text-4xl text-left md:text-center grow font-internal font-bold"
         >
           OUR HAPPY CUSTOMERS
         </h2>

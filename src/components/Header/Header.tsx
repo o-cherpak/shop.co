@@ -19,8 +19,7 @@ export function Header() {
 
         <Link to={`/`}>
           <h2
-            style={{ fontFamily: "Integral CF" }}
-            className={`font-extrabold text-2xl lg:text-3xl transition-all duration-200 ease-out hover:scale-110
+            className={`font-extrabold text-2xl lg:text-3xl font-internal transition-all duration-200 ease-out hover:scale-110
               ${hoverTextColor} active:scale-95 cursor-pointer`}
           >
             SHOP.CO

@@ -8,8 +8,7 @@ export function Footer() {
       <div className="lg:flex gap-4 lg:justify-evenly lg:items-start lg:gap-20 pb-10">
         <div className="lg:w-1/5 flex flex-col gap-4">
           <h3
-            style={{ fontFamily: "Integral CF" }}
-            className="font-extrabold text-3xl lg:text-4xl"
+            className="font-extrabold text-3xl lg:text-4xl font-internal"
           >
             SHOP.CO
           </h3>

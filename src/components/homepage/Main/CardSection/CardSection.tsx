@@ -16,8 +16,7 @@ export function CardSection({ products, title, sortingOption }: Readonly<NewArri
   return (
     <section className="pt-12">
       <h2
-        style={{ fontFamily: "Integral CF", fontWeight: "bold" }}
-        className="text-4xl text-center pb-6"
+        className="text-4xl text-center pb-6 font-internal font-bold"
       >
         {title}
       </h2>
