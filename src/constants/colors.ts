@@ -3,6 +3,8 @@ export const hoverBgColor = "hover:bg-pink-500"
 
 
 export const Colors: Record<string, string> = {
+  white: "bg-white",
+  black: "bg-black",
   red: "bg-red-500",
   orange: "bg-orange-500",
   amber: "bg-amber-500",

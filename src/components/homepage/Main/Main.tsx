@@ -29,13 +29,13 @@ export function Main() {
       ) : (
         <>
           <CardSection
-            products={products?.slice(0, 4) || []}
+            products={products.slice(0, 4)}
             title="NEW ARRIVALS"
             sortingOption={"New products"}
           />
 
           <CardSection
-            products={products?.reverse().slice(0, 4) || []}
+            products={products.reverse().slice(0, 4)}
             title="TOP SELLING"
             sortingOption={"Most popular"}
           />
@@ -50,7 +50,7 @@ export function Main() {
 
       ) : (
         <>
-          <CommentsSection comments={comments?.slice(0, 5) || []}/>
+          <CommentsSection comments={comments.slice(0, 5)}/>
         </>
       )}
 
