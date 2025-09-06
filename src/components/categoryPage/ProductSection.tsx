@@ -19,6 +19,9 @@ export function ProductSection({products, isMobile, comments}: Readonly<ProductS
   const {sortingOption, setSortingOption} = useSortingStore();
   const {filteredProducts, setFilteredProducts} = useFilteredProductsStore();
 
+  const [startDisplayedItem, setStartDisplayedItem] = useState<number>(0);
+  const [endDisplayedItem, setEndDisplayedItem] = useState<number>(12);
+
   const handleFilterState = (val: boolean) => {
     setIsFilterButtonClicked(val);
   };
@@ -60,7 +63,7 @@ export function ProductSection({products, isMobile, comments}: Readonly<ProductS
         isFilterButtonClicked ? "px-0" : "px-2"
       } flex flex-col gap-8`}
     >
-      <div className="flex gap-8 items-start justify-center">
+      <div className="flex gap-8 items-start justify-center md:min-w-2xl">
         <Aside
           isFilterButtonClicked={isFilterButtonClicked}
           onClose={handleFilterState}
@@ -68,21 +71,29 @@ export function ProductSection({products, isMobile, comments}: Readonly<ProductS
           setFilteredProducts={setFilteredProducts}
         />
 
-        <div className="">
+        <div className={"w-6xl"}>
           <TitleAndFilterButton
             title="Casual"
             isMobile={isMobile}
             onFilterClick={handleFilterState}
             onSortChange={setSortingOption}
-            currentSort={sortingOption }
+            currentSort={sortingOption}
           />
 
           <Products
             products={sortedProducts}
+            startDisplayedItem={startDisplayedItem}
+            endDisplayedItem={endDisplayedItem}
           />
 
 
-          {filteredProducts.length > 11 && <PageNavigator productsLength={products.length}/>}
+          {filteredProducts.length > 11 &&
+            <PageNavigator
+              productsLength={products.length}
+              setStartDisplayedItem={setStartDisplayedItem}
+              setEndDisplayedItem={setEndDisplayedItem}
+            />
+          }
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import {faCartShopping, faSearch, faUser,} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {SearchBar} from "./SearchBar.tsx";
+import {SearchBar} from "./SearchBar/SearchBar.tsx";
 import {Link} from "react-router-dom";
 import {hoverTextColor} from "../../constants/colors.ts";
 

@@ -1,15 +1,14 @@
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useEffect, useState} from "react";
-import type {Product} from "../../interfaces/Products.ts";
-import {useProductsStore} from "../../store/useProductsStore.ts";
-import {Link} from "react-router-dom";
+import type {Product} from "../../../interfaces/Products.ts";
+import {useProductsStore} from "../../../store/useProductsStore.ts";
+import {SimilarProduct} from "./SimilarProduct.tsx";
 
 export function SearchBar() {
   const [searchValue, setSearchValue] = useState("");
   const [similarProducts, setSimilarProducts] = useState<Product[]>([]);
   const {products, fetchProducts} = useProductsStore();
-
 
   useEffect(() => {
     fetchProducts();
@@ -55,20 +54,7 @@ export function SearchBar() {
         {similarProducts.length > 0 && (
           <ul className="absolute z-10 mt-2 bg-white shadow-lg rounded-xl overflow-hidden">
             {similarProducts.map((product) => (
-              <li
-                key={product.id}
-                className="p-3 cursor-pointer hover:bg-blue-50 transition-colors"
-              >
-                <Link to={`/CategoryPage/${product.title}`} className={"flex items-center gap-6 justify-between"}>
-                  <p>{product.title}</p>
-
-                  <img
-                    src={`/images/clothes${product.id + 1}.png`}
-                    alt={product.title}
-                    className="rounded w-8"
-                  />
-                </Link>
-              </li>
+              <SimilarProduct product={product} key={product.id}/>
             ))}
           </ul>
         )}

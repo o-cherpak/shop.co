@@ -7,13 +7,17 @@ type ArrivalsCardProps = {
 };
 
 export function Card({product, showDiscount}: Readonly<ArrivalsCardProps>) {
+  let productId = product.id;
+
+  if (productId > 11) productId = productId - 12;
+
   return (
     <Link
       to={`/CategoryPage/${product.title}`}
       className="bg-white rounded-lg p-4 flex-shrink-0 hover:scale-102 transition-transform duration-500 cursor-pointer">
 
       <img
-        src={`/images/clothes${product.id + 1}.png`}
+        src={`/images/clothes${productId + 1}.png`}
         alt={product.title}
         className="rounded mb-2 w-60"
       />

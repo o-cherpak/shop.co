@@ -1,134 +1,523 @@
 [
   {
-    "id": 0,
-    "title": "Graphic T-Shirt",
+    "colors": [
+      "gray",
+      "white"
+    ],
     "description": "Black graphic t-shirt with small front print",
-    "type": ["Body", "casual"],
-    "price": 89.99,
+    "details": "A stylish black graphic t-shirt designed for everyday comfort and casual wear. It features a minimalistic front print, making it versatile enough to pair with jeans, shorts, or jackets. Crafted from soft, breathable cotton, this tee ensures all-day comfort whether you’re at work, hanging out with friends, or traveling. The high-quality print maintains its sharpness even after multiple washes. Available in gray and white, with sizes small, medium, and large.",
     "discount": 15,
+    "id": 0,
+    "price": 89.99,
     "priceWithDiscount": 76.49,
-    "colors": ["gray", "white"],
-    "size": ["small", "medium", "large"]
+    "size": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "title": "Graphic T-Shirt",
+    "type": [
+      "Body",
+      "casual"
+    ]
   },
   {
-    "id": 1,
-    "title": "Slim Fit Jeans",
+    "colors": [
+      "blue"
+    ],
     "description": "Blue slim fit jeans for everyday wear",
-    "type": ["Legs", "casual"],
+    "details": "These blue slim fit jeans are a wardrobe essential, perfect for both casual outings and semi-formal looks. Designed with a modern slim silhouette, they provide a flattering fit while still offering stretch and comfort for everyday wear. Durable denim fabric ensures long-lasting use, while the versatile color makes it easy to style with t-shirts, shirts, or jackets. Available in small, medium, and large sizes.",
+    "discount": 0,
+    "id": 1,
     "price": 59.95,
-    "discount": 0,
     "priceWithDiscount": 59.95,
-    "colors": ["blue"],
-    "size": ["small", "medium", "large"]
+    "size": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "title": "Slim Fit Jeans",
+    "type": [
+      "Legs",
+      "casual"
+    ]
   },
   {
-    "id": 2,
-    "title": "Plaid Shirt",
+    "colors": [
+      "red",
+      "blue",
+      "white"
+    ],
     "description": "Long sleeve plaid button-up shirt",
-    "type": ["Body", "casual"],
-    "price": 149.99,
+    "details": "A long sleeve plaid button-up shirt that brings timeless style to your wardrobe. Designed with a classic plaid pattern in red, blue, and white, this shirt is perfect for layering or wearing on its own. Made from high-quality fabric that’s soft on the skin, it offers breathability and durability. Pair it with jeans for a casual vibe or with chinos for a smart-casual look. Available in small, medium, and large.",
     "discount": 20,
+    "id": 2,
+    "price": 149.99,
     "priceWithDiscount": 119.99,
-    "colors": ["red", "blue", "white"],
-    "size": ["small", "medium", "large"]
+    "size": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "title": "Plaid Shirt",
+    "type": [
+      "Body",
+      "casual"
+    ]
   },
   {
-    "id": 3,
-    "title": "Striped Raglan T-Shirt",
+    "colors": [
+      "orange",
+      "black"
+    ],
     "description": "Orange t-shirt with black raglan sleeves and vertical stripes",
-    "type": ["Body", "casual"],
+    "details": "This orange raglan t-shirt with contrasting black sleeves and bold vertical stripes is a statement piece for casual style lovers. Its modern design makes it stand out, while the breathable fabric ensures comfort throughout the day. Perfect for pairing with jeans, shorts, or joggers. Available in orange and black, with sizes small, medium, and large.",
+    "discount": 10,
+    "id": 3,
     "price": 129,
-    "discount": 10,
     "priceWithDiscount": 116.1,
-    "colors": ["orange", "black"],
-    "size": ["small", "medium", "large"]
-  },
-  {
-    "id": 4,
-    "title": "Black Skinny Jeans",
-    "description": "Solid black skinny jeans",
-    "type": ["Legs", "casual"],
-    "price": 120,
-    "discount": 0,
-    "priceWithDiscount": 120,
-    "colors": ["black"],
-    "size": ["small", "medium", "large"]
-  },
-  {
-    "id": 5,
-    "title": "Denim Shorts",
-    "description": "Light blue washed denim shorts",
-    "type": ["Legs", "casual"],
-    "price": 80,
-    "discount": 0,
-    "priceWithDiscount": 80,
-    "colors": ["blue"],
-    "size": ["small", "medium", "large"]
-  },
-  {
-    "id": 6,
-    "title": "Orange Graphic T-Shirt",
-    "description": "Orange t-shirt with blue printed design on front",
-    "type": ["Body", "casual"],
-    "price": 78,
-    "discount": 0,
-    "priceWithDiscount": 78,
-    "colors": ["orange", "blue", "white"],
-    "size": ["small", "medium", "large"]
-  },
-  {
-    "id": 7,
-    "title": "Green Striped Shirt",
-    "description": "Long sleeve green shirt with thin black stripes",
-    "type": ["Body", "casual"],
-    "price": 46,
-    "discount": 0,
-    "priceWithDiscount": 46,
-    "colors": ["green", "black"],
-    "size": ["small", "medium", "large"]
-  },
-  {
-    "id": 8,
-    "title": "Abstract Print T-Shirt",
-    "description": "White t-shirt with colorful abstract print",
-    "type": ["Body", "casual"],
-    "price": 49.99,
-    "discount": 10,
-    "priceWithDiscount": 44.99,
-    "colors": ["white", "pink", "blue", "yellow", "green"],
-    "size": ["small", "medium", "large"]
-  },
-  {
-    "id": 9,
-    "title": "Polo Shirt",
-    "description": "Short sleeve maroon polo shirt with small logo",
-    "type": ["Body", "casual"],
-    "price": 39.95,
-    "discount": 0,
-    "priceWithDiscount": 39.95,
-    "colors": ["red", "white"],
-    "size": ["small", "medium", "large"]
-  },
-  {
-    "id": 10,
+    "size": [
+      "small",
+      "medium",
+      "large"
+    ],
     "title": "Striped Raglan T-Shirt",
-    "description": "White t-shirt with thin black vertical stripes and black raglan sleeves",
-    "type": ["Body", "casual"],
-    "price": 59.99,
-    "discount": 10,
-    "priceWithDiscount": 53.99,
-    "colors": ["white", "black"],
-    "size": ["small", "medium", "large"]
+    "type": [
+      "Body",
+      "casual"
+    ]
   },
   {
-    "id": 11,
-    "title": "Polo Shirt",
-    "description": "Blue short sleeve polo shirt",
-    "type": ["Body", "casual"],
-    "price": 39.95,
+    "colors": [
+      "black"
+    ],
+    "description": "Solid black skinny jeans",
+    "details": "A pair of solid black skinny jeans that offer a sleek, modern fit. Designed to hug the body while still allowing comfort, they’re perfect for casual wear or night outings. Made with durable denim fabric, these jeans maintain their shape even after frequent washes. Easy to pair with t-shirts, shirts, or jackets. Available in small, medium, and large.",
     "discount": 0,
+    "id": 4,
+    "price": 120,
+    "priceWithDiscount": 120,
+    "size": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "title": "Black Skinny Jeans",
+    "type": [
+      "Legs",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "blue"
+    ],
+    "description": "Light blue washed denim shorts",
+    "details": "Light blue washed denim shorts that bring a relaxed summer vibe. Featuring a comfortable fit and a slightly worn-in look, these shorts are perfect for warm weather, vacations, or casual outings. Durable denim ensures long-lasting use, while the classic design makes them easy to match with tees, polos, or casual shirts. Available in small, medium, and large.",
+    "discount": 0,
+    "id": 5,
+    "price": 80,
+    "priceWithDiscount": 80,
+    "size": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "title": "Denim Shorts",
+    "type": [
+      "Legs",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "orange",
+      "blue",
+      "white"
+    ],
+    "description": "Orange t-shirt with blue printed design on front",
+    "details": "This orange graphic t-shirt with a bold blue printed design on the front is perfect for those who want a vibrant, standout look. Made from lightweight cotton, it keeps you comfortable all day while maintaining its shape and color after washes. The modern graphic adds personality, making it ideal for casual wear, hangouts, or outdoor activities. Available in orange, blue, and white, with sizes small, medium, and large.",
+    "discount": 0,
+    "id": 6,
+    "price": 78,
+    "priceWithDiscount": 78,
+    "size": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "title": "Orange Graphic T-Shirt",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "green",
+      "black"
+    ],
+    "description": "Long sleeve green shirt with thin black stripes",
+    "details": "A long sleeve green shirt with thin black stripes, offering a fresh and modern take on casual wear. The vertical stripe design adds a touch of elegance while keeping a relaxed vibe. Crafted from breathable fabric, it’s perfect for everyday wear or layering. Pair it with jeans for casual looks or chinos for a semi-formal outfit. Available in green and black, with sizes small, medium, and large.",
+    "discount": 0,
+    "id": 7,
+    "price": 46,
+    "priceWithDiscount": 46,
+    "size": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "title": "Green Striped Shirt",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "white",
+      "pink",
+      "blue",
+      "yellow",
+      "green"
+    ],
+    "description": "White t-shirt with colorful abstract print",
+    "details": "A white t-shirt with a vibrant, colorful abstract print that adds energy and creativity to your style. Made from soft, breathable cotton, it ensures comfort and durability. The bold design makes it an eye-catching piece, perfect for casual wear, social gatherings, or creative events. Available in white with pink, blue, yellow, and green accents. Sizes small, medium, and large.",
+    "discount": 10,
+    "id": 8,
+    "price": 49.99,
+    "priceWithDiscount": 44.99,
+    "size": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "title": "Abstract Print T-Shirt",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "red",
+      "white"
+    ],
+    "description": "Short sleeve maroon polo shirt with small logo",
+    "details": "A short sleeve maroon polo shirt with a subtle logo detail, combining comfort and sophistication. Made with high-quality fabric, it’s breathable and soft, perfect for casual or semi-formal settings. Its timeless design makes it versatile enough to wear with jeans, shorts, or chinos. Available in red and white, with sizes small, medium, and large.",
+    "discount": 0,
+    "id": 9,
+    "price": 39.95,
     "priceWithDiscount": 39.95,
-    "colors": ["blue", "white"],
-    "size": ["small", "medium", "large"]
+    "size": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "title": "Polo Shirt",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "white",
+      "black"
+    ],
+    "description": "White t-shirt with thin black vertical stripes and black raglan sleeves",
+    "details": "A white raglan t-shirt with thin black vertical stripes and black sleeves, designed for a clean yet stylish look. The contrast in colors adds a sporty vibe, while the lightweight fabric ensures all-day comfort. Easy to match with jeans, shorts, or joggers for a casual appearance. Available in white and black, with sizes small, medium, and large.",
+    "discount": 10,
+    "id": 10,
+    "price": 59.99,
+    "priceWithDiscount": 53.99,
+    "size": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "title": "Raglan T-Shirt",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "blue",
+      "white"
+    ],
+    "description": "Blue short sleeve polo shirt",
+    "details": "A classic blue short sleeve polo shirt made from soft, breathable fabric. Its timeless design makes it suitable for casual outings, work, or semi-formal events. The simple yet elegant look ensures versatility, allowing it to pair well with jeans, shorts, or chinos. Available in blue and white, with sizes small, medium, and large.",
+    "discount": 0,
+    "id": 11,
+    "price": 39.95,
+    "priceWithDiscount": 39.95,
+    "size": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "title": "Polo Shirt",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "navy",
+      "beige"
+    ],
+    "description": "Black graphic t-shirt with small front print",
+    "details": "A stylish black graphic t-shirt designed for everyday comfort and casual wear. It features a minimalistic front print, making it versatile enough to pair with jeans, shorts, or jackets. Crafted from soft, breathable cotton, this tee ensures all-day comfort whether you’re at work, hanging out with friends, or traveling. The high-quality print maintains its sharpness even after multiple washes. Available in gray and white, with sizes small, medium, and large.",
+    "discount": 15,
+    "id": 12,
+    "price": 79.99,
+    "priceWithDiscount": 67.99,
+    "size": [
+      "medium",
+      "large",
+      "x-large"
+    ],
+    "title": "Graphic T-Shirt Copy",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "dark blue",
+      "light blue"
+    ],
+    "description": "Blue slim fit jeans for everyday wear",
+    "details": "These blue slim fit jeans are a wardrobe essential, perfect for both casual outings and semi-formal looks. Designed with a modern slim silhouette, they provide a flattering fit while still offering stretch and comfort for everyday wear. Durable denim fabric ensures long-lasting use, while the versatile color makes it easy to style with t-shirts, shirts, or jackets. Available in small, medium, and large sizes.",
+    "discount": 5,
+    "id": 13,
+    "price": 64.95,
+    "priceWithDiscount": 61.70,
+    "size": [
+      "medium",
+      "large"
+    ],
+    "title": "Slim Fit Jeans Copy",
+    "type": [
+      "Legs",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "green",
+      "yellow",
+      "black"
+    ],
+    "description": "Long sleeve plaid button-up shirt",
+    "details": "A long sleeve plaid button-up shirt that brings timeless style to your wardrobe. Designed with a classic plaid pattern in red, blue, and white, this shirt is perfect for layering or wearing on its own. Made from high-quality fabric that’s soft on the skin, it offers breathability and durability. Pair it with jeans for a casual vibe or with chinos for a smart-casual look. Available in small, medium, and large.",
+    "discount": 20,
+    "id": 14,
+    "price": 139.99,
+    "priceWithDiscount": 111.99,
+    "size": [
+      "small",
+      "x-large"
+    ],
+    "title": "Plaid Shirt Copy",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "yellow",
+      "grey"
+    ],
+    "description": "Orange t-shirt with black raglan sleeves and vertical stripes",
+    "details": "This orange raglan t-shirt with contrasting black sleeves and bold vertical stripes is a statement piece for casual style lovers. Its modern design makes it stand out, while the breathable fabric ensures comfort throughout the day. Perfect for pairing with jeans, shorts, or joggers. Available in orange and black, with sizes small, medium, and large.",
+    "discount": 10,
+    "id": 15,
+    "price": 119,
+    "priceWithDiscount": 107.1,
+    "size": [
+      "small",
+      "x-large"
+    ],
+    "title": "Striped Raglan T-Shirt Copy",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "dark grey"
+    ],
+    "description": "Solid black skinny jeans",
+    "details": "A pair of solid black skinny jeans that offer a sleek, modern fit. Designed to hug the body while still allowing comfort, they’re perfect for casual wear or night outings. Made with durable denim fabric, these jeans maintain their shape even after frequent washes. Easy to pair with t-shirts, shirts, or jackets. Available in small, medium, and large.",
+    "discount": 10,
+    "id": 16,
+    "price": 110,
+    "priceWithDiscount": 99,
+    "size": [
+      "small",
+      "large",
+      "x-large"
+    ],
+    "title": "Black Skinny Jeans Copy",
+    "type": [
+      "Legs",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "black"
+    ],
+    "description": "Light blue washed denim shorts",
+    "details": "Light blue washed denim shorts that bring a relaxed summer vibe. Featuring a comfortable fit and a slightly worn-in look, these shorts are perfect for warm weather, vacations, or casual outings. Durable denim ensures long-lasting use, while the classic design makes them easy to match with tees, polos, or casual shirts. Available in small, medium, and large.",
+    "discount": 0,
+    "id": 17,
+    "price": 75,
+    "priceWithDiscount": 75,
+    "size": [
+      "large",
+      "x-large"
+    ],
+    "title": "Denim Shorts Copy",
+    "type": [
+      "Legs",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "red",
+      "purple"
+    ],
+    "description": "Orange t-shirt with blue printed design on front",
+    "details": "This orange graphic t-shirt with a bold blue printed design on the front is perfect for those who want a vibrant, standout look. Made from lightweight cotton, it keeps you comfortable all day while maintaining its shape and color after washes. The modern graphic adds personality, making it ideal for casual wear, hangouts, or outdoor activities. Available in orange, blue, and white, with sizes small, medium, and large.",
+    "discount": 15,
+    "id": 18,
+    "price": 72,
+    "priceWithDiscount": 61.2,
+    "size": [
+      "medium",
+      "large",
+      "x-large"
+    ],
+    "title": "Orange Graphic T-Shirt Copy",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "blue",
+      "grey"
+    ],
+    "description": "Long sleeve green shirt with thin black stripes",
+    "details": "A long sleeve green shirt with thin black stripes, offering a fresh and modern take on casual wear. The vertical stripe design adds a touch of elegance while keeping a relaxed vibe. Crafted from breathable fabric, it’s perfect for everyday wear or layering. Pair it with jeans for casual looks or chinos for a semi-formal outfit. Available in green and black, with sizes small, medium, and large.",
+    "discount": 5,
+    "id": 19,
+    "price": 49,
+    "priceWithDiscount": 46.55,
+    "size": [
+      "small",
+      "medium"
+    ],
+    "title": "Green Striped Shirt Copy",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "black",
+      "grey"
+    ],
+    "description": "White t-shirt with colorful abstract print",
+    "details": "A white t-shirt with a vibrant, colorful abstract print that adds energy and creativity to your style. Made from soft, breathable cotton, it ensures comfort and durability. The bold design makes it an eye-catching piece, perfect for casual wear, social gatherings, or creative events. Available in white with pink, blue, yellow, and green accents. Sizes small, medium, and large.",
+    "discount": 10,
+    "id": 20,
+    "price": 54.99,
+    "priceWithDiscount": 49.49,
+    "size": [
+      "large",
+      "x-large"
+    ],
+    "title": "Abstract Print T-Shirt Copy",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "navy",
+      "green"
+    ],
+    "description": "Short sleeve maroon polo shirt with small logo",
+    "details": "A short sleeve maroon polo shirt with a subtle logo detail, combining comfort and sophistication. Made with high-quality fabric, it’s breathable and soft, perfect for casual or semi-formal settings. Its timeless design makes it versatile enough to wear with jeans, shorts, or chinos. Available in red and white, with sizes small, medium, and large.",
+    "discount": 0,
+    "id": 21,
+    "price": 42.95,
+    "priceWithDiscount": 42.95,
+    "size": [
+      "small",
+      "x-large"
+    ],
+    "title": "Polo Shirt Copy",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "red",
+      "grey"
+    ],
+    "description": "White t-shirt with thin black vertical stripes and black raglan sleeves",
+    "details": "A white raglan t-shirt with thin black vertical stripes and black sleeves, designed for a clean yet stylish look. The contrast in colors adds a sporty vibe, while the lightweight fabric ensures all-day comfort. Easy to match with jeans, shorts, or joggers for a casual appearance. Available in white and black, with sizes small, medium, and large.",
+    "discount": 10,
+    "id": 22,
+    "price": 54.99,
+    "priceWithDiscount": 49.49,
+    "size": [
+      "medium",
+      "large"
+    ],
+    "title": "Raglan T-Shirt Copy",
+    "type": [
+      "Body",
+      "casual"
+    ]
+  },
+  {
+    "colors": [
+      "pink",
+      "mint"
+    ],
+    "description": "Blue short sleeve polo shirt",
+    "details": "A classic blue short sleeve polo shirt made from soft, breathable fabric. Its timeless design makes it suitable for casual outings, work, or semi-formal events. The simple yet elegant look ensures versatility, allowing it to pair well with jeans, shorts, or chinos. Available in blue and white, with sizes small, medium, and large.",
+    "discount": 10,
+    "id": 23,
+    "price": 36.95,
+    "priceWithDiscount": 33.25,
+    "size": [
+      "small",
+      "large",
+      "x-large"
+    ],
+    "title": "Polo Shirt Copy",
+    "type": [
+      "Body",
+      "casual"
+    ]
   }
 ]
