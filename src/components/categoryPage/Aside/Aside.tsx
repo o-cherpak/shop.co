@@ -52,7 +52,7 @@ export function Aside({isFilterButtonClicked, onClose, setFilteredProducts, prod
     <aside
       className={`${
         isFilterButtonClicked ? "flex fixed" : "hidden"
-      } bg-white h-screen overflow-y-auto top-0 right-0 z-50 pt-4 lg:pt-0 lg:flex flex-col w-full lg:w-1/4 border-2 border-gray-300 lg:h-full px-4 py-2 rounded-xl gap-4`}
+      } bg-white h-screen overflow-y-auto top-0 right-0 z-50 pt-4 lg:pt-0 xl:flex flex-col w-full lg:w-1/4 border-2 border-gray-300 lg:h-full px-4 py-2 rounded-xl gap-4`}
     >
       <div
         className="pt-4 flex w-full justify-between items-center pb-4

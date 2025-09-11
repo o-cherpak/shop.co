@@ -28,9 +28,9 @@ export function TitleAndFilterButton({title,onFilterClick,onSortChange,currentSo
   };
 
   return (
-    <div className="relative flex items-end justify-between lg:justify-start">
+    <div className="relative flex items-start justify-between lg:justify-start">
       <div
-        className="flex justify-between items-end w-full px-4 "
+        className="flex justify-between items-end w-full px-4"
       >
 
         <div className="flex items-end gap-2">
@@ -53,7 +53,7 @@ export function TitleAndFilterButton({title,onFilterClick,onSortChange,currentSo
 
       <button
         onClick={handleClickedFilterButton}
-        className="lg:hidden rotate-90 rounded-full bg-gray-200 py-1 px-2"
+        className="xl:hidden rotate-90 rounded-full bg-gray-200 py-2 px-2 mr-8 lg:mr-12"
       >
         <FontAwesomeIcon icon={faSliders}/>
       </button>

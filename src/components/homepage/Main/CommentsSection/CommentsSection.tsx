@@ -12,6 +12,7 @@ type CommentsSectionProps = {
 export function CommentsSection({ comments }: Readonly<CommentsSectionProps>) {
   const [startIndex, setStartIndex] = useState(0);
 
+  const maxComments = 5;
   const total = comments.length;
 
   const getVisibleComments = () => {
@@ -19,7 +20,7 @@ export function CommentsSection({ comments }: Readonly<CommentsSectionProps>) {
 
     const result = [];
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < maxComments; i++) {
       result.push(comments[(startIndex + i) % total]);
     }
     return result;

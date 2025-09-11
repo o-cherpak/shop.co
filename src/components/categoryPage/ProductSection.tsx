@@ -63,7 +63,7 @@ export function ProductSection({products, isMobile, comments}: Readonly<ProductS
         isFilterButtonClicked ? "px-0" : "px-2"
       } flex flex-col gap-8`}
     >
-      <div className="flex gap-8 items-start justify-center md:min-w-2xl">
+      <div className="flex gap-8 items-start justify-center lg:min-w-2xl">
         <Aside
           isFilterButtonClicked={isFilterButtonClicked}
           onClose={handleFilterState}

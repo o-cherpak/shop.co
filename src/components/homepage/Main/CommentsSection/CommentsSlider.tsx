@@ -21,7 +21,7 @@ export function CommentsSlider({
           return (
             <div
               key={com.itemId}
-              className="w-[300px] shrink-0 transition-all duration-300"
+              className="w-[300px] shrink-0"
               style={{
                 filter: isCenter ? "none" : "blur(2px)",
               }}
