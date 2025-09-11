@@ -53,7 +53,7 @@ export function TitleAndFilterButton({title,onFilterClick,onSortChange,currentSo
 
       <button
         onClick={handleClickedFilterButton}
-        className="xl:hidden rotate-90 rounded-full bg-gray-200 py-2 px-2 mr-8 lg:mr-12"
+        className="xl:hidden rotate-90 rounded-full bg-gray-200 py-2 px-2 mr-4 md:mr-8 lg:mr-12"
       >
         <FontAwesomeIcon icon={faSliders}/>
       </button>

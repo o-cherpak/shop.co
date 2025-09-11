@@ -89,7 +89,10 @@ export function Aside({isFilterButtonClicked, onClose, setFilteredProducts, prod
       <button
         className="bg-black mt-4 w-full text-white rounded-3xl p-3 mb-2 hover:cursor-pointer
         hover:bg-black/80 duration-200 transition-all"
-        onClick={handleFilterButtonClick}
+        onClick={() => {
+          handleFilterButtonClick();
+          handleCloseFilter();
+        }}
 
       >
         Apply Filter
